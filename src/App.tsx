@@ -1,6 +1,7 @@
 import {RespawnPrompt} from './ui/RespawnPrompt';
 import {MatchupScreen} from "./ui/MatchupScreen";
 import {PickLobby} from "./ui/PickLobby";
+import {ReadyScreen} from './ui/ReadyScreen';
 import {advancePickLobby,advanceMatchup,picking} from "./engine/pick-lobby";
 import { useEffect, useRef, useState } from "react";
 import { chooseAugment, chooseDecision, createGame, depart, offerAugments } from "./engine/game";
@@ -27,8 +28,17 @@ import "./spectator-polish.css";
 import "./ui/portal-assets.css";
 import "./ui/observer-layout.css";
 import "./ui/game-dialog.css";
+import "./ui/mobile.css";
 const clock = (seconds: number) => `${String(Math.floor(seconds / 60)).padStart(2,"0")}:${String(seconds % 60).padStart(2,"0")}`;
-export default function App({initialGame,saveEnabled=true}:{initialGame?:Game;saveEnabled?:boolean}={}) {
+export default function App({initialGame,saveEnabled=true,showStartScreen=initialGame===undefined}:{initialGame?:Game;saveEnabled?:boolean;showStartScreen?:boolean}) {
+ const [entryGame]=useState(()=>initialGame??loadGame());
+ const [sessionGame,setSessionGame]=useState(entryGame),[accepted,setAccepted]=useState(!showStartScreen);
+ // The simulation is not mounted until acceptance: lobby timers, autosave and
+ // match time cannot advance behind the ready screen.
+ if(!accepted)return <ReadyScreen canResume={!picking(entryGame)&&entryGame.phase!=='finished'} onAccept={()=>{setSessionGame(picking(entryGame)?entryGame:createGame());setAccepted(true)}} onResume={()=>{setSessionGame(entryGame);setAccepted(true)}}/>;
+ return <GameApp initialGame={sessionGame} saveEnabled={saveEnabled}/>;
+}
+function GameApp({initialGame,saveEnabled=true}:{initialGame:Game;saveEnabled?:boolean}) {
  const [game,setGame]=useState<Game>(()=>initialGame?structuredClone(initialGame):loadGame()),[speed,setSpeed]=useState(1),[paused,setPaused]=useState(false),[saveError,setSaveError]=useState(false),[selected,setSelected]=useState('blue-0'),[allLogs,setAllLogs]=useState(false);
  const [popups,setPopups]=useState(()=>syncPopups(emptyPopups(),game)),mapRef=useRef<HTMLDivElement>(null);
  const preparing=picking(game),player=game.blue[0],points=unspentSkills(player);

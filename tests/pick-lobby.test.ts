@@ -49,7 +49,7 @@ it('restores pending offers, bench state and timers without restarting preparati
 it('never renders enemy identities, rosters or the battlefield until picks are locked',()=>{
  const g=createGame(4);
  try{
-  for(const phase of ['pick','swap'] as const){g.phase=phase;vi.stubGlobal('localStorage',{getItem:()=>JSON.stringify(g)});const html=renderToStaticMarkup(createElement(App));
+  for(const phase of ['pick','swap'] as const){g.phase=phase;vi.stubGlobal('localStorage',{getItem:()=>JSON.stringify(g)});const html=renderToStaticMarkup(createElement(App,{showStartScreen:false}));
    expect(html).toContain('상대팀 비공개');expect(html).not.toContain('aria-label="적군 현황"');expect(html).not.toContain('aria-label="칼바람 나락 관전 지도');
    for(const u of g.red){expect(html).not.toContain(`/assets/champions/${u.champion.id}.png`);expect(html.includes(`>${u.champion.name}<`)).toBe(false);}
   }

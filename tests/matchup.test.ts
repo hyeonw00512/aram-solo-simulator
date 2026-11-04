@@ -20,12 +20,12 @@ it('preserves remaining preview time across save reload and ignores countdown ou
 });
 it('renders both teams only after lock, with no shop or augment overlay on the VS screen',()=>{
  const g=createGame(31);lockPicks(g);
- try{vi.stubGlobal('localStorage',{getItem:()=>JSON.stringify(g)});const html=renderToStaticMarkup(createElement(App));
+ try{vi.stubGlobal('localStorage',{getItem:()=>JSON.stringify(g)});const html=renderToStaticMarkup(createElement(App,{showStartScreen:false}));
   expect(html).toContain('양 팀 대결 미리보기');expect(html).toContain('아군 조합');expect(html).toContain('상대 조합');
   for(const u of [...g.blue,...g.red])expect(html).toContain(`/assets/champions/${u.champion.id}.png`);
   expect(html).not.toContain('아이템 창');expect(html).not.toContain('<dialog');expect(html).not.toContain('플레이 설정');
-  for(let i=0;i<7;i++)advanceMatchup(g);const inGame=renderToStaticMarkup(createElement(App));expect(inGame).toContain('칼바람 나락 관전 지도');expect(inGame).toContain('증강 3개 확인');expect(inGame).not.toContain('pick-screen');
-  offerAugments(g);chooseAugment(g,g.pending!.choices[0].id);const shop=renderToStaticMarkup(createElement(App));expect(shop).toContain('칼바람 나락 관전 지도');expect(shop).not.toContain('pick-screen');
+  for(let i=0;i<7;i++)advanceMatchup(g);const inGame=renderToStaticMarkup(createElement(App,{showStartScreen:false}));expect(inGame).toContain('칼바람 나락 관전 지도');expect(inGame).toContain('증강 3개 확인');expect(inGame).not.toContain('pick-screen');
+  offerAugments(g);chooseAugment(g,g.pending!.choices[0].id);const shop=renderToStaticMarkup(createElement(App,{showStartScreen:false}));expect(shop).toContain('칼바람 나락 관전 지도');expect(shop).not.toContain('pick-screen');
  }finally{vi.unstubAllGlobals();}
 });
 it('summarizes each team using champion roles, counting hybrid roles explicitly',()=>{
