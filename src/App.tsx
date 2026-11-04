@@ -8,6 +8,7 @@ import { chooseAugment, chooseDecision, createGame, depart, offerAugments } from
 import type { Game } from "./engine/types";
 import { loadGame, SAVE_KEY } from "./storage";
 import { Battlefield } from "./ui/Battlefield";
+import {EncounterMoment} from './ui/EncounterMoment';
 import { Inspector, Roster } from "./ui/Roster";
 import { ShopWindow } from "./ui/ShopWindow";
 import {PlaySettings} from "./ui/PlaySettings";
@@ -29,6 +30,7 @@ import "./ui/portal-assets.css";
 import "./ui/observer-layout.css";
 import "./ui/game-dialog.css";
 import "./ui/mobile.css";
+import "./ui/encounter-moment.css";
 const clock = (seconds: number) => `${String(Math.floor(seconds / 60)).padStart(2,"0")}:${String(seconds % 60).padStart(2,"0")}`;
 export default function App({initialGame,saveEnabled=true,showStartScreen=initialGame===undefined}:{initialGame?:Game;saveEnabled?:boolean;showStartScreen?:boolean}) {
  const [entryGame]=useState(()=>initialGame??loadGame());
@@ -79,10 +81,11 @@ function GameApp({initialGame,saveEnabled=true}:{initialGame:Game;saveEnabled?:b
   <div className="match-layout">
    <div className="stage" ref={mapRef}><div className="stage-caption"><span><i className="live-dot"/> 칼바람 나락</span><span>전장 시뮬레이션 · {game.encounter?"교전 중":game.phase==="decision"?"판단의 순간":"관전 모드"}</span></div>
     <Battlefield game={game} selected={selected} onSelect={setSelected} onUsePortal={()=>open(popupValid('respawn',game)?'respawn':'base')} onShop={openShop}/>
+    <EncounterMoment game={game}/>
     <WorldStatus game={game}/>
    </div>
    <div className="team-rosters"><Roster game={game} team="blue" selected={selected} onSelect={setSelected}/><Roster game={game} team="red" selected={selected} onSelect={setSelected}/></div>
-    <section className="decision-panel match-status" hidden={game.phase!=='playing'||!!game.pending} aria-live="polite">
+    <section className="decision-panel match-status" hidden={game.phase!=='playing'||!!game.pending||!!game.encounter} aria-live="polite">
      {game.phase==="playing"&&<><span className="eyebrow">{game.encounter?"ENGAGEMENT IN PROGRESS":"WATCH THE BATTLE"}</span><h2>{!player.alive?`부활까지 ${Math.max(0,Math.ceil(player.respawnAt-game.time))}초`:game.encounter?`${definitions.choices.find(c=>c.id===game.encounter!.intent)?.label} · ${game.encounter.wave}/4단계`:"전장을 지켜보는 중"}</h2><p>{game.encounter?"팀원들은 성향, 이전 경험, 현재 각을 보고 각자 반응합니다.":"이동·교환이 계속 진행됩니다. 상황이 발생하면 선택지가 열립니다."}</p>{game.encounter&&<div className="reaction-strip">{game.blue.filter(u=>u.alive).map(u=><span key={u.id}><b>{u.champion.name}</b>{u.status}</span>)}</div>}</>}
     </section>
     <TeamChat game={game} update={update}/>

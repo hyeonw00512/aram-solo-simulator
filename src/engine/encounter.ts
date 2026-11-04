@@ -174,7 +174,8 @@ export function advanceEncounter(game: Game) {
   const participants = units(game).filter(u => u.alive && !u.returningToBase && !u.portal && !(u.atFountain&&nearPortal(u)));
   const plans = participants.map(u => planResponse(game, u, rng));
   const previousPlans = encounter.rounds.at(-1)?.plans;
-  encounter.rounds.push({ time: game.time, plans });
+  const round = { time: game.time, plans, movements: participants.map(u=>({unitId:u.id,from:u.position,to:u.position,visible:u.team==='blue'||visibleTarget(game,u)})) };
+  encounter.rounds.push(round);
   log(game, `교전 ${encounter.wave + 1}/${balance.waves} — 아군 ${living(game.blue).length}명 · 적군 ${living(game.red).length}명`, "major");
   // Everyone decides from the same snapshot before movement or damage occurs.
   const destinations = new Map<string, number>();
@@ -214,6 +215,7 @@ export function advanceEncounter(game: Game) {
     }
   }
   for (const unit of participants) unit.position = destinations.get(unit.id) ?? unit.position;
+  for (const movement of round.movements) movement.to = participants.find(u=>u.id===movement.unitId)!.position;
   for (const unit of participants) for (const side of ["blue", "red"] as const) {
     const location = side === "blue" ? simulation.packs.bluePosition : simulation.packs.redPosition;
     if (game.packs[side] <= game.time && Math.abs(unit.position - location) < 3 && healthRatio(unit) < .85) {

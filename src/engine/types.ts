@@ -24,7 +24,7 @@ export interface Encounter {
   startUnits: { id: string; health: number; deaths: number; position: number; damage: number }[];
   initialOpportunity: number;
   protections: { protector: string; protected: string }[];
-  rounds: { time: number; plans: ResponsePlan[] }[];
+  rounds: { time: number; plans: ResponsePlan[]; movements?: {unitId:string;from:number;to:number;visible:boolean}[] }[];
 }
 export interface EncounterResult { id: number; intent: Intent; situation: Situation; text: string; allyLosses: number; enemyLosses: number; playerEscaped: boolean; rounds: Encounter["rounds"]; }
 export interface VisualEvent { at: number; from?: string; to: string; type: "physical" | "magic" | "true" | "miss" | "heal"; amount: number; }

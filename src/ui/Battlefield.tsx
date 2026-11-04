@@ -1,23 +1,16 @@
 import {camouflaged} from '../engine/evelynn';
 import {resourceKind,resourceLabel,currentResource} from '../engine/resources';
 import {statsFor} from '../engine/stats';
-import type { Game, Unit } from '../engine/types';
+import type { Game } from '../engine/types';
 import {WorldLayer} from './WorldLayer';
 import { PortalMap } from './PortalMap';
 import { AbyssScenery } from './AbyssScenery';
 import { FountainLayer } from './BasePanel';
 import {TeamPings} from './TeamPings';
-import { mapPoint } from './mapGeometry';
-import {portalPoint,landmark} from '../engine/map-layout';
+import { mapPoint,unitPoint as point } from './mapGeometry';
+import {TacticalLayer} from './EncounterMoment';
 import simulation from '../../data/simulation.json';
 
-// Opposing teams are offset slightly for legibility when world positions coincide.
-// Lateral slots and these display offsets never affect combat distances.
-const point = (u:Unit,game?:Game) => {
- if(u.portal){const entry=portalPoint(u.team,'entry',game),exit=portalPoint(u.team,'exit',game),t=Math.max(0,Math.min(1,((game?.time??u.portal.startedAt)-u.portal.startedAt)/(u.portal.arriveAt-u.portal.startedAt)));return mapPoint(entry.position+(exit.position-entry.position)*t,entry.laneOffset+(exit.laneOffset-entry.laneOffset)*t)}
- if(u.atFountain){const base=landmark(u.team,'spawn'),slot=Number(u.id.split('-')[1]);return mapPoint(base.position+(slot%3-1)*4,base.laneOffset+(Math.floor(slot/3)-.5)*32)}
- return mapPoint(u.position + (u.team === 'blue' ? -2.2 : 2.2), (Number(u.id.split('-')[1])-2)*34);
-};
 export function Battlefield({game,selected,onSelect,onUsePortal,onShop}:{game:Game;selected:string;onSelect:(id:string)=>void;onUsePortal:()=>void;onShop:()=>void}) {
  const members=[...game.blue,...game.red];
  return <div className="battlefield abyss-map"><svg viewBox="0 0 900 560" role="group" aria-label="칼바람 나락 관전 지도. 좌하단 아군 기지에서 우상단 적 기지로 이어지는 눈 덮인 외길 석교.">
@@ -29,6 +22,7 @@ export function Battlefield({game,selected,onSelect,onUsePortal,onShop}:{game:Ga
    const p=mapPoint(side==='blue'?simulation.packs.bluePosition:simulation.packs.redPosition,side==='blue'?54:-54),ready=game.packs[side]<=game.time;
    return <g key={side} transform={`translate(${p.x} ${p.y})`}><title>체력팩 · {ready?'사용 가능':`${game.packs[side]-game.time}초 후 생성`}</title><ellipse rx="16" ry="9" fill="#183c43" stroke={ready?'#6bdab0':'#4b6773'} opacity=".85"/><path d="M-10 -7L0 -13 10 -7V2L0 8-10 2Z" fill={ready?'#325f55':'#354b57'}/><path d="M-3 -18H3V-13H8V-7H3V-2H-3V-7H-8V-13H-3Z" fill={ready?'#9af1bf':'#607b82'} filter={ready?'url(#abyss-glow)':undefined}/><text y="23" textAnchor="middle" fill={ready?'#a2e6c7':'#8fa5b5'} fontSize="10" stroke="#10202c" strokeWidth="3" paintOrder="stroke">{ready?'체력팩':`${game.packs[side]-game.time}초`}</text></g>;
   })}
+  <TacticalLayer game={game}/>
   {members.filter(u=>u.alive).map(u=>{
    const maxResource=statsFor(u).resourceMax,resource=currentResource(u,maxResource),kind=resourceKind(u);
    const p=point(u,game),color=u.team==='blue'?'#71e2ed':'#ff869a',chosen=u.id===selected;
