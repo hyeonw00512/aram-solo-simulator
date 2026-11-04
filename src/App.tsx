@@ -99,8 +99,8 @@ function GameApp({initialGame,saveEnabled=true}:{initialGame:Game;saveEnabled?:b
   </nav>
   <DecisionWindow game={game} open={active==='decision'} onMinimize={minimize} onSettings={openSettings} update={update}/>
   {game.phase==='augment'&&!game.pending&&<GameDialog open={active==='decision'} label="첫 증강 선택" onMinimize={minimize}><DialogHeading eyebrow="AUGMENT SELECT" title="증강 선택" onMinimize={minimize}/><div className="game-dialog-body"><p>선택할 증강을 준비하고 있습니다.</p><button onClick={()=>update(offerAugments)}>증강 3개 확인</button></div></GameDialog>}
-  <RespawnPrompt game={game} open={active==='respawn'} update={update} onShop={openShop} onMinimize={minimize}/>
-  <ShopWindow open={active==='shop'} game={game} paused={paused} update={update} onClose={close} onDecision={()=>open('decision')} onMinimize={minimize} onDepart={()=>{update(depart);close()}}/>
+  <RespawnPrompt game={game} open={active==='respawn'} update={update} onMinimize={minimize}/>
+  <ShopWindow open={active==='shop'} game={game} paused={paused} update={update} onClose={close} onDecision={()=>setPopups(s=>openPopup({...s,active:null,back:s.back.filter(p=>p!=='shop'&&p!=='decision')},'decision'))} onMinimize={minimize} onDepart={()=>{update(depart);close()}}/>
   <PlaySettings game={game} open={active==='settings'} onToggle={openSettings} onClose={minimize} update={update} showToggle={false}/>
   <BaseWindow game={game} open={active==='base'} update={op=>{update(op);close()}} onShop={openShop} onMinimize={minimize}/>
   <ResultWindow game={game} open={active==='result'} onMinimize={minimize} onRestart={reset}/>

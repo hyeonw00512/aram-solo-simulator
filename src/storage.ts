@@ -31,7 +31,9 @@ export function upgradeBattleSave(game:Game){
     for(const augment of owned)applyAugment(game,unit,augment);
     refreshStats(unit);state(unit).mana=statsFor(unit).mana;
   }
-  for(const u of [...game.blue,...game.red])u.augmentClaims=Math.min(augmentLevels.length,Math.max(u.augmentClaims??1,u.augments.length,!u.alive?augmentLevels.filter(level=>u.level>=level).length:0));
+  // Claims are fixed at the instant of death. Passive XP while dead must not
+  // unlock another round merely because the player reloads the page.
+  for(const u of [...game.blue,...game.red])u.augmentClaims=Math.min(augmentLevels.length,Math.max(u.augmentClaims??1,u.augments.length));
   closeCompletedAugmentOffer(game);
   return game;
 }

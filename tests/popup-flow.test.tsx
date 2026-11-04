@@ -5,12 +5,35 @@ import {createGame,offerAugments,chooseAugment} from '../src/engine/game';
 import {grantBonusLevel} from '../src/engine/progression';
 import {usePortal,walkFromBase} from '../src/engine/portal';
 import {buyItem} from '../src/engine/shop';
+import {applyDamage,respawn} from '../src/engine/combat';
+import {tick} from '../src/engine/game';
+import {upgradeBattleSave} from '../src/storage';
 import {tickPlayback} from '../src/ui/game-clock';
 import {emptyPopups,syncPopups,openPopup,closePopup,minimizePopups} from '../src/ui/popup-flow';
 
 function playing(){const g=createGame(415);offerAugments(g);chooseAugment(g,g.pending!.choices[0].id);g.phase='playing';g.time=80;g.nextDecision=99999;return g;}
 function revived(){const g=playing(),u=g.blue[0];g.respawnPrompt=true;u.atFountain=true;u.holdAtBase=true;u.deaths=1;u.respawnAt=g.time;return g;}
 const activeLabels=(html:string)=>[...html.matchAll(/<dialog[^>]*aria-label="([^"]+)"[^>]*data-active="true"/g)].map(m=>m[1]);
+it('opens the shop once on every death, and never on respawn alone',()=>{
+ const g=playing();let p=syncPopups(emptyPopups(),g);g.blue[0].atFountain=false;
+ applyDamage(g,undefined,g.blue[0],999999,'test','true');p=syncPopups(p,g);expect(p.active).toBe('shop');
+ expect(activeLabels(renderToStaticMarkup(<App initialGame={g} saveEnabled={false}/>))).toEqual(['아이템 창']);
+ p=minimizePopups(p);expect(syncPopups(p,g).active).toBeNull();
+ g.time=g.blue[0].respawnAt;respawn(g);p=syncPopups(p,g);expect(p.active).toBe('respawn');
+ walkFromBase(g);applyDamage(g,undefined,g.blue[0],999999,'test','true');p=syncPopups(p,g);expect(p.active).toBe('shop');
+});
+it('shops first after a level 11 first death, then chooses level 7 and 11 augments without respawning',()=>{
+ let g=playing();g.blue[0].level=11;g.blue[0].atFountain=false;
+ g=tick(g);expect(g.blue[0].augments).toHaveLength(1);expect(g.blue[0].augmentClaims).toBe(1);
+ applyDamage(g,undefined,g.blue[0],999999,'test','true');g=tick(g);
+ expect(g.blue[0].augmentClaims).toBe(3);expect(g.blue[0].alive).toBe(false);
+ let p=syncPopups(emptyPopups(),g);expect(p.active).toBe('shop');expect(p.back).toContain('decision');
+ expect(buyItem(g,'1036')).toBe(true);p=closePopup(p,g);expect(p.active).toBe('decision');
+ const time=g.time;expect(g.pending!.description).toContain('7레벨 증강');chooseAugment(g,g.pending!.choices[0].id);
+ g=upgradeBattleSave(JSON.parse(JSON.stringify(g)));p=syncPopups(p,g);expect(p.active).toBe('decision');expect(g.pending!.description).toContain('11레벨 증강');
+ chooseAugment(g,g.pending!.choices[0].id);p=syncPopups(p,g);expect(p.active).not.toBe('shop');expect(g.phase).toBe('playing');expect(g.blue[0].augments).toHaveLength(3);expect(g.blue[0].alive).toBe(false);expect(g.time).toBe(time);
+ g.time=g.blue[0].respawnAt;respawn(g);p=syncPopups(p,g);expect(p.active).toBe('respawn');expect(g.pending).toBeUndefined();
+});
 it('automatically opens initial augments and the starting shop over the battlefield',()=>{
  const g=createGame(1);g.phase='augment';let p=syncPopups(emptyPopups(),g);expect(p.active).toBe('decision');offerAugments(g);p=syncPopups(p,g);expect(p.active).toBe('decision');
  chooseAugment(g,g.pending!.choices[0].id);p=syncPopups(p,g);expect(p.active).toBe('shop');

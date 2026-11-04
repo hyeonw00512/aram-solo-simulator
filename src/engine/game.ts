@@ -64,7 +64,7 @@ export function offerAugments(game: Game) {
   game.phase='augment';game.augmentSerial=(game.augmentSerial??0)+1;game.augmentRerolls=[false,false,false];
   const rng=new Rng(game.seed+game.time+game.augmentSerial*19);
   for(let i=options.length-1;i>0;i--){const j=rng.int(i+1);[options[i],options[j]]=[options[j],options[i]];}
-  game.pending={title:(tier==='silver'?'실버':tier==='gold'?'골드':'프리즘')+' 증강 선택',description:(game.time>0?'사망으로 열린 증강입니다. 선택을 마칠 때까지 경기 시간이 멈춥니다.':'첫 증강을 선택하세요.')+` ${player.augments.length+1}/4회 선택 · 등급은 매 회 무작위입니다.`+' 한 번 제시된 증강은 이번 경기에서 다시 나오지 않습니다. 카드마다 각각 한 번씩 새로고침할 수 있습니다.'+(count<3?` 남은 새 후보 ${count}개를 표시합니다.`:''),choices:options.slice(0,count).map(a=>augmentChoice(game,a.id))};
+  game.pending={title:(tier==='silver'?'실버':tier==='gold'?'골드':'프리즘')+' 증강 선택',description:(game.time>0?'사망으로 열린 증강입니다. 선택을 마칠 때까지 경기 시간이 멈춥니다.':'첫 증강을 선택하세요.')+` ${player.augments.length+1}/4회 선택 · ${augmentLevels[player.augments.length]}레벨 증강${game.time>0?` · 미선택 ${Math.max(0,(player.augmentClaims??1)-player.augments.length)}회`:""} · 등급은 매 회 무작위입니다.`+' 한 번 제시된 증강은 이번 경기에서 다시 나오지 않습니다. 카드마다 각각 한 번씩 새로고침할 수 있습니다.'+(count<3?` 남은 새 후보 ${count}개를 표시합니다.`:''),choices:options.slice(0,count).map(a=>augmentChoice(game,a.id))};
   rememberAugments(game);
 }
 function augmentChoice(game:Game,id:string){const a=augments.find(a=>a.id===id)!;return {id:a.id,label:a.name,hint:augmentDescription(a.name)+' · 추천 근거: '+augmentFit(game.blue[0],a,game.seed).reason,bonus:a.power};}

@@ -83,7 +83,7 @@ describe('death-gated preparation and continuous simulation',()=>{
 });
 describe('rendered information',()=>{
  it('renders four respawn choices, tower health and legal item upgrade links',()=>{
-  const g=match();g.respawnPrompt=true;const update=()=>{};const prompt=renderToStaticMarkup(<RespawnPrompt game={g} update={update} onShop={()=>{}}/>);expect(prompt).toContain('<dialog');expect(prompt).toContain('전장 보기');for(const choice of ['예 · 포탈 진입','아니오 · 걸어서 복귀','아이템 구매 후 포탈','아이템 구매 후 걸어서 복귀'])expect(prompt).toContain(choice);expect(prompt).toContain('아이템 구매 후 걸어서 복귀');
+  const g=match();g.respawnPrompt=true;const update=()=>{};const prompt=renderToStaticMarkup(<RespawnPrompt game={g} update={update}/>);expect(prompt).toContain('<dialog');expect(prompt).toContain('전장 보기');for(const choice of ['포탈로 복귀','걸어서 복귀'])expect(prompt).toContain(choice);expect(prompt).not.toContain('아이템 구매 후');expect((prompt.match(/<div class="respawn-options">([\s\S]*?)<\/div>/)?.[1].match(/<button/g)??[])).toHaveLength(2);
   const towers=renderToStaticMarkup(<WorldStatus game={g}/>);expect(towers.match(/<progress/g)?.length).toBe(g.world!.buildings.length);expect(towers).toContain('아군');
   const shop=renderToStaticMarkup(<Shop game={g} update={update}/>);expect(shop).toContain('상위 아이템');for(const i of shopItems.filter(i=>i.from?.includes('1036')))expect(shop).toContain(i.name);
  });

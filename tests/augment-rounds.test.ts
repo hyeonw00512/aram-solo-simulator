@@ -40,7 +40,14 @@ it('migrates old fixed-tier games without changing past rewards or cancelling th
  g.blue[0].augmentClaims=4;offerAugments(g);const cards=structuredClone(g.pending),owned=structuredClone(g.blue[0].augments);delete g.augmentTiers;
  upgradeBattleSave(g);expect(g.augmentTiers).toEqual(['silver','gold','prism','prism']);expect(g.pending).toEqual(cards);expect(g.blue[0].augments).toEqual(owned);chooseAugment(g,g.pending!.choices[0].id);expect(g.blue[0].augments).toHaveLength(4);expect(g.phase).toBe('playing');
 });
-it('restores the fourth death-earned claim after the obsolete three-round patch, without granting it to living units',()=>{
- const dead=createGame(3);dead.phase='playing';dead.time=100;dead.blue[0].level=15;dead.blue[0].alive=false;dead.blue[0].augmentClaims=3;upgradeBattleSave(dead);expect(dead.blue[0].augmentClaims).toBe(4);
+it('preserves death-earned claims on reload instead of granting more from the current level',()=>{
+ const dead=createGame(3);dead.phase='playing';dead.time=100;dead.blue[0].level=15;dead.blue[0].alive=false;dead.blue[0].augmentClaims=3;upgradeBattleSave(dead);expect(dead.blue[0].augmentClaims).toBe(3);
  const live=createGame(3);live.phase='playing';live.time=100;live.blue[0].level=15;live.blue[0].augmentClaims=3;upgradeBattleSave(live);expect(live.blue[0].augmentClaims).toBe(3);
+});
+it('requires another death when a level threshold is crossed during respawn waiting',()=>{
+ let g=createGame(11);offerAugments(g);chooseAugment(g,g.pending!.choices[0].id);g.phase='playing';g.time=100;g.nextDecision=99999;g.blue[0].atFountain=false;g.blue[0].level=6;
+ applyDamage(g,undefined,g.blue[0],999999,'test','true');expect(g.blue[0].augmentClaims).toBe(1);
+ g.blue[0].level=7;g=upgradeBattleSave(JSON.parse(JSON.stringify(g)));g=tick(g);expect(g.blue[0].augmentClaims).toBe(1);expect(g.phase).toBe('playing');expect(g.pending).toBeUndefined();
+ g.time=g.blue[0].respawnAt;g=tick(g);expect(g.blue[0].alive).toBe(true);expect(g.blue[0].augmentClaims).toBe(1);
+ applyDamage(g,undefined,g.blue[0],999999,'test','true');g=tick(g);expect(g.blue[0].augmentClaims).toBe(2);expect(g.phase).toBe('augment');
 });

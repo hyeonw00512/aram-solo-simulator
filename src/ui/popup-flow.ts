@@ -25,18 +25,21 @@ export function minimizePopups(s:PopupState):PopupState{return {...s,active:null
 export function syncPopups(previous:PopupState,g:Game):PopupState{
  let s:PopupState={...previous,back:previous.back.filter(p=>popupValid(p,g)),seen:{...previous.seen}};
  if(s.active&&!popupValid(s.active,g))s=closePopup(s,g);
- const u=g.blue[0],events:{kind:Popup;key:string}[]=[];
+ const u=g.blue[0],events:{kind:Popup;key:string;priority?:number}[]=[];
  if(inGame(g)){
   if(g.phase==='decision'||g.phase==='augment')events.push({kind:'decision',key:g.phase==='augment'?`augment:${g.augmentSerial??0}`:`decision:${g.encounterSerial}:${g.pending?.title??''}`});
   if(g.phase==='shop')events.push({kind:'shop',key:'starting-shop'});
+  // Open once per death, ahead of newly earned augments. Closing the shop
+  // reveals the queued augment; inspecting/minimizing must not reopen it.
+  if(!u.alive&&g.time>0&&g.phase!=='finished')events.push({kind:'shop',key:`death:${u.deaths}:${u.respawnAt}`,priority:85});
   if(popupValid('respawn',g))events.push({kind:'respawn',key:`${u.deaths}:${u.respawnAt}`});
   if(g.time>0&&g.phase!=='finished'&&!u.autoSkills&&unspentSkills(u)>0)events.push({kind:'settings',key:`skill:${u.level}`});
   if(g.phase==='finished')events.push({kind:'result',key:`${g.winner}:${g.time}`});
  }
- for(const {kind,key} of events.sort((a,b)=>priority[a.kind]-priority[b.kind])){
+ for(const {kind,key,priority:eventPriority} of events.sort((a,b)=>(a.priority??priority[a.kind])-(b.priority??priority[b.kind]))){
   if(s.seen[kind]===key)continue;s.seen[kind]=key;
   if(s.active===kind)continue;
-  if(!s.active||priority[kind]>priority[s.active])s=openPopup(s,kind);
+  if(!s.active||(eventPriority??priority[kind])>priority[s.active])s=openPopup(s,kind);
   else if(!s.back.includes(kind))s.back=[kind,...s.back];
  }
  return JSON.stringify(s)===JSON.stringify(previous)?previous:s;
