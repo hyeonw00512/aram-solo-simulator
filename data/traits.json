@@ -1,0 +1,10 @@
+{
+  "공격적입니다": { "aggression": 0.85, "risk": 0.7, "cohesion": 0.6, "retreatHealth": 0.2, "misread": 0.5, "focusCarry": 0.3 },
+  "죽음을 두려워하지 않습니다": { "aggression": 0.95, "risk": 0.95, "cohesion": 0.45, "retreatHealth": 0.08, "misread": 0.65, "focusCarry": 0.3 },
+  "사립니다": { "aggression": 0.15, "risk": 0.15, "cohesion": 0.65, "retreatHealth": 0.55, "misread": 0.05, "focusCarry": 0.1 },
+  "딜러만 노립니다": { "aggression": 0.65, "risk": 0.65, "cohesion": 0.45, "retreatHealth": 0.3, "misread": 0.3, "focusCarry": 0.95 },
+  "혼자 다닙니다": { "aggression": 0.6, "risk": 0.7, "cohesion": 0.1, "retreatHealth": 0.3, "misread": 0.45, "focusCarry": 0.45 },
+  "체력팩에 집착합니다": { "aggression": 0.25, "risk": 0.3, "cohesion": 0.3, "retreatHealth": 0.65, "misread": 0.1, "focusCarry": 0.1 },
+  "포킹만 합니다": { "aggression": 0.25, "risk": 0.25, "cohesion": 0.5, "retreatHealth": 0.4, "misread": 0.1, "focusCarry": 0.5 },
+  "고집이 셉니다": { "aggression": 0.55, "risk": 0.6, "cohesion": 0.15, "retreatHealth": 0.25, "misread": 0.4, "focusCarry": 0.4 }
+}

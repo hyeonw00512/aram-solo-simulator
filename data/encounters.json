@@ -1,0 +1,156 @@
+{
+  "ally-picked": {
+    "title": "아군이 잘렸습니다",
+    "description": "{subject}이(가) 쓰러졌습니다. 남은 인원으로 어떻게 대응할까요?"
+  },
+  "enemy-overextended": {
+    "title": "적의 앞선 발걸음",
+    "description": "{subject}이(가) 아군 쪽으로 깊게 나왔습니다. 적의 후속 합류에도 주의해야 합니다."
+  },
+  "low-health": {
+    "title": "버틸 것인가, 빠질 것인가",
+    "description": "내 체력이 낮습니다. 엄호를 기대할지, 먼저 거리를 벌릴지 결정하세요."
+  },
+  "standoff": {
+    "title": "다리 위 대치",
+    "description": "양 팀이 교전 거리로 접근했습니다. 이번 교전에서 내 행동을 선택하세요."
+  },
+  "ally-danger": {
+    "title": "아군이 위험합니다",
+    "description": "{subject}의 체력이 낮습니다. 엄호할지, 상대를 먼저 압박할지 판단하세요."
+  },
+  "tower-defense": {
+    "title": "포탑 앞 수비",
+    "description": "적이 아군 포탑까지 밀고 들어왔습니다. 안전한 곳을 확보하고 다음 행동을 선택하세요."
+  },
+  "choices": [
+    {
+      "id": "engage",
+      "label": "이니시를 연다",
+      "hint": "먼저 거리를 좁혀 집중 공격합니다. 팀원이 호응하지 않으면 고립될 수 있습니다."
+    },
+    {
+      "id": "retreat",
+      "label": "쭉 빠진다",
+      "hint": "아군 포탑 쪽으로 이동합니다. 남은 팀원이 엄호하거나 무리하게 싸울 수 있습니다."
+    },
+    {
+      "id": "trade",
+      "label": "교환을 본다",
+      "hint": "가까운 적에게 짧게 피해를 주고 빠집니다. 공격적인 팀원은 진입 신호로 오해할 수 있습니다."
+    },
+    {
+      "id": "wait",
+      "label": "눈치를 보며 각을 잰다",
+      "hint": "먼저 위치를 유지합니다. 다음 단계부터 인원·체력·스킬 준비를 다시 보고 안전하면 짧게 공격합니다."
+    },
+    {
+      "id": "peel",
+      "label": "위험한 아군을 엄호한다",
+      "hint": "체력이 낮은 아군 곁으로 이동해 받는 피해를 줄입니다. 나에게 공격이 집중될 수 있습니다."
+    },
+    {
+      "id": "hold",
+      "label": "포탑을 끼고 받아친다",
+      "hint": "포탑 쪽으로 물러난 뒤 공격 범위에 들어온 적을 받아칩니다."
+    },
+    {
+      "id": "healthpack",
+      "label": "체력팩을 확보한다",
+      "hint": "체력팩 위치까지 이동합니다. 도착 전에 잘리거나 다른 챔피언이 먼저 가져갈 수 있습니다."
+    },
+    {
+      "id": "push",
+      "label": "미니언과 건물을 압박한다",
+      "hint": "웨이브와 함께 전진해 적 건물을 공격합니다. 적이 오면 반격을 받을 수 있습니다."
+    },
+    {
+      "id": "clear",
+      "label": "미니언부터 정리한다",
+      "hint": "스킬과 평타를 라인 정리에 사용합니다. 적 챔피언 공격보다 웨이브를 우선합니다."
+    },
+    {
+      "id": "regroup",
+      "label": "궁극기와 합류를 기다린다",
+      "hint": "아군 전방 건물 쪽으로 모여 쿨다운과 마나를 확보합니다."
+    }
+  ],
+  "menus": {
+    "ally-picked": [
+      "engage",
+      "retreat",
+      "trade",
+      "wait"
+    ],
+    "enemy-overextended": [
+      "engage",
+      "trade",
+      "wait",
+      "peel"
+    ],
+    "low-health": [
+      "retreat",
+      "healthpack",
+      "hold",
+      "wait"
+    ],
+    "standoff": [
+      "engage",
+      "trade",
+      "wait"
+    ],
+    "ally-danger": [
+      "peel",
+      "engage",
+      "retreat",
+      "wait"
+    ],
+    "tower-defense": [
+      "hold",
+      "clear",
+      "engage",
+      "retreat"
+    ],
+    "siege": [
+      "push",
+      "trade",
+      "wait",
+      "regroup"
+    ],
+    "no-wave": [
+      "clear",
+      "wait",
+      "regroup",
+      "engage"
+    ],
+    "ultimate-wait": [
+      "regroup",
+      "clear",
+      "trade",
+      "engage"
+    ]
+  },
+  "actions": {
+    "engage": "진입",
+    "join": "호응",
+    "retreat": "후퇴",
+    "cover": "후퇴 엄호",
+    "poke": "짧은 교환",
+    "hesitate": "합류 지연",
+    "chase": "추격",
+    "clear": "미니언 정리",
+    "push": "건물 압박"
+  },
+  "siege": {
+    "title": "미니언과 함께 공성",
+    "description": "아군 미니언이 적 건물에 도착했습니다. 건물을 치거나 적의 반격을 대비하세요."
+  },
+  "no-wave": {
+    "title": "포탑 앞에 미니언이 없습니다",
+    "description": "미니언 없이 건물을 치면 피해가 크게 줄고 포탑의 공격을 직접 받습니다."
+  },
+  "ultimate-wait": {
+    "title": "핵심 궁극기를 기다릴까요?",
+    "description": "합류한 아군의 궁극기가 대부분 준비되지 않았습니다. 라인을 정리하거나 재진입 시점을 잡으세요."
+  }
+}

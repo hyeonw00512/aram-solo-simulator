@@ -1,0 +1,695 @@
+{
+  "generatedAt": "2026-10-23T01:19:15.833Z",
+  "items": [
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "감쇠 광선",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "극악무도",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "급속 성장",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "너만을 위해",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "넘을 수 없는 벽",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "노련한 저격수",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "능력치 더하기 능력치!",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "되풀이",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "마법 명사수",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "마법 미사일",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "무법자의 투지",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "바늘에 실 끼우기",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "범람",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "부메랑 투척",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "빛의 인도자 결의",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "빵과 버터",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "빵과 잼",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "빵과 치즈",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "상급 조준경 부착",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "소환술사",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "속행",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "시작부터 끝까지",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "신난다!",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "신성한 중재",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "영혼 흡수",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "전술적 대비",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "전환: 프리즘",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "점멸 난사",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "처형 시간",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "천상의 신체",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "최첨단 발명가",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "치명적 치유",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "치명적인 공격",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "취약",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "퀘스트: 강철 같은 심장",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "타오르는 새벽",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "핀볼",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "화염 낙인",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "환영 무기",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "gold",
+      "name": "후원",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "거석상의 용기 (★★★★)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "거인 (★★★)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "거인 학살자 (★★★)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "검무 (★★★)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "검을 뽑아라 (★★★)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "결투의 대가 (-)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "광대 대학 (-)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "궁극기 대변혁 (★★)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "기본으로 돌아가기",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "난공불락 (-)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "능력치 더하기 능력치 더하기 능력치!",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "대지의 각성",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "도망갈 수 없어 (-)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "돌진",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "미친 과학자 (★★)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "보석 건틀릿",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "불길한 서약",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "신비한 주먹 (-)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "양손잡이",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "요정 마법",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "유레카",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "유리 대포",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "전능의 영혼 (★★★)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "전장의 교향곡",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "전환: 혼돈",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "죽음의 순환",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "지옥의 전도체",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "최상급 조준경 부착",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "최종 형태",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "퀘스트: 우글렛의 마녀 모자",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "퀘스트: 이케시아의 몰락",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "탭 댄서",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "판도라의 상자 (-)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "프로틴 음료 (-)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "prism",
+      "name": "한 발에 두 놈",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "감시의 장막",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "강타자",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "광신자",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "궁극의 저지 불가",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "그림자 질주",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "능력치!",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "능수능란",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "대지의 영혼",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "도주 계획",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "도취",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "마법공학의 영혼",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "마법사 (물리)",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "민병대",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "바다의 영혼",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "부식",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "불을 밝혀",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "사악한 정신",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "선혈포식",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "속전속결",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "순수주의자 - 마법사",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "승리를 위한 회전",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "쌍둥이 불꽃",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "우당탕탕",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "육중한 힘",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "음속 폭발",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "응급 처치 키트",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "적응형 능력치",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "전환: 골드",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "점멸탄",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "정신 변환",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "조준경 부착",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "지옥불 영혼",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "징수의 총 업그레이드",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "차가운 냉기",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "태풍",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "폴터가이스트",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "하체 운동의 날",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "확보된 킬",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "확률적 방어",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    },
+    {
+      "category": "augment-simulation",
+      "tier": "silver",
+      "name": "다단 중첩",
+      "message": "효과 수치를 게임 파라미터로 변환하기 전 검토가 필요합니다."
+    }
+  ]
+}

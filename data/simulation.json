@@ -1,0 +1,7 @@
+{
+  "combat": { "skillBase": 55, "skillPerLevel": 13, "adRatio": 0.7, "apRatio": 0.65, "attackWindow": 2.5, "baseDodge": 0.08, "dodgeMovement": 0.001, "retreatDodge": 0.1, "waitDodge": 0.08, "maxDodge": 0.38, "towerDamage": 230 },
+  "economy": { "goldPerSecond": 5, "inventorySlots": 6 },
+  "memory": { "minTrust": -80, "maxTrust": 80, "recklessPenalty": 15, "failurePenalty": 4, "goodDecision": 9, "protection": 7, "reluctance": 3, "goodAngle": 4, "necessity": 4 },
+  "packs": { "bluePosition": 27, "redPosition": 73, "healFraction": 0.2, "cooldown": 90 },
+  "levelGrowth": { "base": 0.7025, "perLevel": 0.0175 }
+}

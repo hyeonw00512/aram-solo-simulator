@@ -1,0 +1,881 @@
+{
+  "generatedAt": "2026-10-23T01:29:09.051Z",
+  "items": [
+    {
+      "category": "champion-skill-tags",
+      "id": "Aatrox",
+      "name": "아트록스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Ahri",
+      "name": "아리",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Akali",
+      "name": "아칼리",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Akshan",
+      "name": "아크샨",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Alistar",
+      "name": "알리스타",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Ambessa",
+      "name": "암베사",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Amumu",
+      "name": "아무무",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Anivia",
+      "name": "애니비아",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Annie",
+      "name": "애니",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Aphelios",
+      "name": "아펠리오스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Ashe",
+      "name": "애쉬",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "AurelionSol",
+      "name": "아우렐리온 솔",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Aurora",
+      "name": "오로라",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Azir",
+      "name": "아지르",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Bard",
+      "name": "바드",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Belveth",
+      "name": "벨베스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Blitzcrank",
+      "name": "블리츠크랭크",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Braum",
+      "name": "브라움",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Caitlyn",
+      "name": "케이틀린",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Cassiopeia",
+      "name": "카시오페아",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Corki",
+      "name": "코르키",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "DrMundo",
+      "name": "문도 박사",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Draven",
+      "name": "드레이븐",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Ekko",
+      "name": "에코",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Elise",
+      "name": "엘리스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Evelynn",
+      "name": "이블린",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Ezreal",
+      "name": "이즈리얼",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Fiddlesticks",
+      "name": "피들스틱",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Fizz",
+      "name": "피즈",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Galio",
+      "name": "갈리오",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Gangplank",
+      "name": "갱플랭크",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Garen",
+      "name": "가렌",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Gnar",
+      "name": "나르",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Gragas",
+      "name": "그라가스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Graves",
+      "name": "그레이브즈",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Gwen",
+      "name": "그웬",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Heimerdinger",
+      "name": "하이머딩거",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Hwei",
+      "name": "흐웨이",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Illaoi",
+      "name": "일라오이",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Irelia",
+      "name": "이렐리아",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Ivern",
+      "name": "아이번",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Janna",
+      "name": "잔나",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "JarvanIV",
+      "name": "자르반 4세",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Jax",
+      "name": "잭스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Jhin",
+      "name": "진",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Jinx",
+      "name": "징크스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "KSante",
+      "name": "크산테",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Kaisa",
+      "name": "카이사",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Kalista",
+      "name": "칼리스타",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Karma",
+      "name": "카르마",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Karthus",
+      "name": "카서스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Kassadin",
+      "name": "카사딘",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Katarina",
+      "name": "카타리나",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Kayle",
+      "name": "케일",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Kayn",
+      "name": "케인",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Kennen",
+      "name": "케넨",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Kindred",
+      "name": "킨드레드",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Kled",
+      "name": "클레드",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Leblanc",
+      "name": "르블랑",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Lillia",
+      "name": "릴리아",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Locke",
+      "name": "로크",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Lucian",
+      "name": "루시안",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Lulu",
+      "name": "룰루",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Lux",
+      "name": "럭스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Malphite",
+      "name": "말파이트",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Malzahar",
+      "name": "말자하",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Maokai",
+      "name": "마오카이",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "MasterYi",
+      "name": "마스터 이",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Mel",
+      "name": "멜",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Milio",
+      "name": "밀리오",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "MissFortune",
+      "name": "미스 포츈",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "MonkeyKing",
+      "name": "오공",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Mordekaiser",
+      "name": "모데카이저",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Naafiri",
+      "name": "나피리",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Nasus",
+      "name": "나서스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Neeko",
+      "name": "니코",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Nidalee",
+      "name": "니달리",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Nilah",
+      "name": "닐라",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Nocturne",
+      "name": "녹턴",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Nunu",
+      "name": "누누와 윌럼프",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Olaf",
+      "name": "올라프",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Ornn",
+      "name": "오른",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Pantheon",
+      "name": "판테온",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Poppy",
+      "name": "뽀삐",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Pyke",
+      "name": "파이크",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Qiyana",
+      "name": "키아나",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Quinn",
+      "name": "퀸",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Rakan",
+      "name": "라칸",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Rammus",
+      "name": "람머스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "RekSai",
+      "name": "렉사이",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Renata",
+      "name": "레나타 글라스크",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Renekton",
+      "name": "레넥톤",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Rengar",
+      "name": "렝가",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Riven",
+      "name": "리븐",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Rumble",
+      "name": "럼블",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Ryze",
+      "name": "라이즈",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Samira",
+      "name": "사미라",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Seraphine",
+      "name": "세라핀",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Shaco",
+      "name": "샤코",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Shen",
+      "name": "쉔",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Shyvana",
+      "name": "쉬바나",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Singed",
+      "name": "신지드",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Sivir",
+      "name": "시비르",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Skarner",
+      "name": "스카너",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Smolder",
+      "name": "스몰더",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Soraka",
+      "name": "소라카",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Swain",
+      "name": "스웨인",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Sylas",
+      "name": "사일러스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Syndra",
+      "name": "신드라",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "TahmKench",
+      "name": "탐 켄치",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Taliyah",
+      "name": "탈리야",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Talon",
+      "name": "탈론",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Taric",
+      "name": "타릭",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Teemo",
+      "name": "티모",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Thresh",
+      "name": "쓰레쉬",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Tristana",
+      "name": "트리스타나",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Trundle",
+      "name": "트런들",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Tryndamere",
+      "name": "트린다미어",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "TwistedFate",
+      "name": "트위스티드 페이트",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Twitch",
+      "name": "트위치",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Udyr",
+      "name": "우디르",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Urgot",
+      "name": "우르곳",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Varus",
+      "name": "바루스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Vayne",
+      "name": "베인",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Veigar",
+      "name": "베이가",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Velkoz",
+      "name": "벨코즈",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Vex",
+      "name": "벡스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Vi",
+      "name": "바이",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Viego",
+      "name": "비에고",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Viktor",
+      "name": "빅토르",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Vladimir",
+      "name": "블라디미르",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Warwick",
+      "name": "워윅",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Xayah",
+      "name": "자야",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Xerath",
+      "name": "제라스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "XinZhao",
+      "name": "신 짜오",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Yasuo",
+      "name": "야스오",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Yone",
+      "name": "요네",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Yorick",
+      "name": "요릭",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Yunara",
+      "name": "유나라",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Zaahen",
+      "name": "자헨",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Zac",
+      "name": "자크",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Zed",
+      "name": "제드",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Ziggs",
+      "name": "직스",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Zilean",
+      "name": "질리언",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Zoe",
+      "name": "조이",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    },
+    {
+      "category": "champion-skill-tags",
+      "id": "Zyra",
+      "name": "자이라",
+      "message": "설명문 기반 태그의 확신도가 낮아 수동 검토가 필요합니다."
+    }
+  ]
+}

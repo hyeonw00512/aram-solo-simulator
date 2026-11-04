@@ -1,0 +1,814 @@
+{
+  "version": "16.21",
+  "sourceUrl": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/ko_kr/v1/cherry-augments.json",
+  "collectedAt": "2026-10-26T16:35:34.798Z",
+  "data": {
+    "gold-001": {
+      "name": "감쇠 광선",
+      "sourceName": "감쇠 광선",
+      "sourceId": 1074,
+      "file": "/assets/augments/gold-001.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/shrinkray_small.png"
+    },
+    "gold-002": {
+      "name": "극악무도",
+      "sourceName": "극악무도",
+      "sourceId": 1390,
+      "file": "/assets/augments/gold-002.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/aram_phenomenalevil_small.png"
+    },
+    "gold-003": {
+      "name": "급속 성장",
+      "sourceName": "급속 성장",
+      "sourceId": 1401,
+      "file": "/assets/augments/gold-003.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/growthspurt_small.png"
+    },
+    "gold-004": {
+      "name": "너만을 위해",
+      "sourceName": "너만을 위해",
+      "sourceId": 1141,
+      "file": "/assets/augments/gold-004.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/allforyou_small.png"
+    },
+    "gold-005": {
+      "name": "넘을 수 없는 벽",
+      "sourceName": "넘을 수 없는 벽",
+      "sourceId": 1149,
+      "file": "/assets/augments/gold-005.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/impassable_small.png"
+    },
+    "gold-006": {
+      "name": "노련한 저격수",
+      "sourceName": "노련한 저격수",
+      "sourceId": 1113,
+      "file": "/assets/augments/gold-006.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/skilledsniper_small.png"
+    },
+    "gold-007": {
+      "name": "능력치 더하기 능력치!",
+      "sourceName": "능력치 더하기 능력치!",
+      "sourceId": 1403,
+      "file": "/assets/augments/gold-007.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/statsonstats_small.png"
+    },
+    "gold-008": {
+      "name": "되풀이",
+      "sourceName": "되풀이",
+      "sourceId": 1068,
+      "file": "/assets/augments/gold-008.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/recursion_small.png"
+    },
+    "gold-009": {
+      "name": "마법 명사수",
+      "sourceName": "마법 명사수",
+      "sourceId": 1129,
+      "file": "/assets/augments/gold-009.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/marksmage_small.png"
+    },
+    "gold-010": {
+      "name": "마법 미사일",
+      "sourceName": "마법 미사일",
+      "sourceId": 1133,
+      "file": "/assets/augments/gold-010.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/maps/particles/kiwi/magicmissile_small.png"
+    },
+    "gold-011": {
+      "name": "무법자의 투지",
+      "sourceName": "무법자의 투지",
+      "sourceId": 1063,
+      "file": "/assets/augments/gold-011.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/outlawsgrit_small.png"
+    },
+    "gold-012": {
+      "name": "바늘에 실 끼우기",
+      "sourceName": "바늘에 실 끼우기",
+      "sourceId": 1084,
+      "file": "/assets/augments/gold-012.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/threadtheneedle_small.png"
+    },
+    "gold-013": {
+      "name": "범람",
+      "sourceName": "범람",
+      "sourceId": 1311,
+      "file": "/assets/augments/gold-013.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/overflow_small.png"
+    },
+    "gold-014": {
+      "name": "부메랑 투척",
+      "sourceName": "부메랑 투척",
+      "sourceId": 1061,
+      "file": "/assets/augments/gold-014.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/okboomerang_small.png"
+    },
+    "gold-015": {
+      "name": "빛의 인도자 결의",
+      "sourceName": "빛의 인도자 결의",
+      "sourceId": 1020,
+      "file": "/assets/augments/gold-015.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dawnbringersresolve_small.png"
+    },
+    "gold-016": {
+      "name": "빵과 버터",
+      "sourceName": "빵과 버터",
+      "sourceId": 1103,
+      "file": "/assets/augments/gold-016.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+    },
+    "gold-017": {
+      "name": "빵과 잼",
+      "sourceName": "빵과 잼",
+      "sourceId": 1150,
+      "file": "/assets/augments/gold-017.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+    },
+    "gold-018": {
+      "name": "빵과 치즈",
+      "sourceName": "빵과 치즈",
+      "sourceId": 1151,
+      "file": "/assets/augments/gold-018.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png"
+    },
+    "gold-019": {
+      "name": "상급 조준경 부착",
+      "sourceName": "상급 조준경 부착",
+      "sourceId": 1071,
+      "file": "/assets/augments/gold-019.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/scopierweapons_small.png"
+    },
+    "gold-020": {
+      "name": "소환술사",
+      "sourceName": "소환술사",
+      "sourceId": 1104,
+      "file": "/assets/augments/gold-020.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/minionmancer_small.png"
+    },
+    "gold-021": {
+      "name": "속행",
+      "sourceName": "속행",
+      "sourceId": 1098,
+      "file": "/assets/augments/gold-021.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/withhaste_small.png"
+    },
+    "gold-022": {
+      "name": "시작부터 끝까지",
+      "sourceName": "시작부터 끝까지",
+      "sourceId": 1038,
+      "file": "/assets/augments/gold-022.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/frombeginningtoend_small.png"
+    },
+    "gold-023": {
+      "name": "신난다!",
+      "sourceName": "신난다!",
+      "sourceId": 1322,
+      "file": "/assets/augments/gold-023.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/getexcited_small.png"
+    },
+    "gold-024": {
+      "name": "신성한 중재",
+      "sourceName": "신성한 중재",
+      "sourceId": 1301,
+      "file": "/assets/augments/gold-024.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/slowactingpainkillers_small.png"
+    },
+    "gold-025": {
+      "name": "영혼 흡수",
+      "sourceName": "영혼 흡수",
+      "sourceId": 1077,
+      "file": "/assets/augments/gold-025.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/soulsiphon_small.png"
+    },
+    "gold-026": {
+      "name": "전술적 대비",
+      "sourceName": "전술적 대비",
+      "sourceId": 1180,
+      "file": "/assets/augments/gold-026.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/bigbrain_small.png"
+    },
+    "gold-027": {
+      "name": "전환: 프리즘",
+      "sourceName": "전환: 프리즘",
+      "sourceId": 1238,
+      "file": "/assets/augments/gold-027.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/transmuteprismatic_small.png"
+    },
+    "gold-028": {
+      "name": "점멸 난사",
+      "sourceName": "점멸 난사",
+      "sourceId": 1116,
+      "file": "/assets/augments/gold-028.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/flashy_small.png"
+    },
+    "gold-029": {
+      "name": "처형 시간",
+      "sourceName": "처형 시간",
+      "sourceId": 1211,
+      "file": "/assets/augments/gold-029.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/itskillingtime_small.png"
+    },
+    "gold-030": {
+      "name": "천상의 신체",
+      "sourceName": "천상의 신체",
+      "sourceId": 1013,
+      "file": "/assets/augments/gold-030.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/celestialbody_small.png"
+    },
+    "gold-031": {
+      "name": "최첨단 발명가",
+      "sourceName": "최첨단 발명가",
+      "sourceId": 1002,
+      "file": "/assets/augments/gold-031.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/apexinventor_small.png"
+    },
+    "gold-032": {
+      "name": "치명적 치유",
+      "sourceName": "치명적 치유",
+      "sourceId": 1118,
+      "file": "/assets/augments/gold-032.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/criticalhealing_small.png"
+    },
+    "gold-033": {
+      "name": "치명적인 공격",
+      "sourceName": "치명적인 공격",
+      "sourceId": 1047,
+      "file": "/assets/augments/gold-033.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/itscritical_small.png"
+    },
+    "gold-034": {
+      "name": "취약",
+      "sourceName": "취약",
+      "sourceId": 1092,
+      "file": "/assets/augments/gold-034.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/vulnerability_small.png"
+    },
+    "gold-035": {
+      "name": "퀘스트: 강철 같은 심장",
+      "sourceName": "퀘스트: 강철 같은 심장",
+      "sourceId": 152,
+      "file": "/assets/augments/gold-035.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/quest_steelyourheart_small.png"
+    },
+    "gold-036": {
+      "name": "타오르는 새벽",
+      "sourceName": "타오르는 새벽",
+      "sourceId": 1072,
+      "file": "/assets/augments/gold-036.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/searingdawn_small.png"
+    },
+    "gold-037": {
+      "name": "핀볼",
+      "sourceName": "핀볼",
+      "sourceId": 1358,
+      "file": "/assets/augments/gold-037.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/pinballsnowball_small.png"
+    },
+    "gold-038": {
+      "name": "화염 낙인",
+      "sourceName": "화염 낙인",
+      "sourceId": 1036,
+      "file": "/assets/augments/gold-038.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/firebrand_small.png"
+    },
+    "gold-039": {
+      "name": "환영 무기",
+      "sourceName": "환영 무기",
+      "sourceId": 1029,
+      "file": "/assets/augments/gold-039.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/etherealweapon_small.png"
+    },
+    "gold-040": {
+      "name": "후원",
+      "sourceName": "후원",
+      "sourceId": 1384,
+      "file": "/assets/augments/gold-040.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/donation_small.png"
+    },
+    "prism-001": {
+      "name": "거석상의 용기 (★★★★)",
+      "sourceName": "거석상의 용기",
+      "sourceId": 1018,
+      "file": "/assets/augments/prism-001.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/courageofthecolossus_small.png"
+    },
+    "prism-002": {
+      "name": "거인 (★★★)",
+      "sourceName": "거인",
+      "sourceId": 1041,
+      "file": "/assets/augments/prism-002.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/goliath_small.png"
+    },
+    "prism-003": {
+      "name": "거인 학살자 (★★★)",
+      "sourceName": "거인 학살자",
+      "sourceId": 1195,
+      "file": "/assets/augments/prism-003.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/giantslayer_small.png"
+    },
+    "prism-004": {
+      "name": "검무 (★★★)",
+      "sourceName": "검무",
+      "sourceId": 1006,
+      "file": "/assets/augments/prism-004.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/bladewaltz_small.png"
+    },
+    "prism-005": {
+      "name": "검을 뽑아라 (★★★)",
+      "sourceName": "검을 뽑아라",
+      "sourceId": 1134,
+      "file": "/assets/augments/prism-005.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/drawyoursword_small.png"
+    },
+    "prism-006": {
+      "name": "결투의 대가 (-)",
+      "sourceName": "결투의 대가",
+      "sourceId": 1054,
+      "file": "/assets/augments/prism-006.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/masterofduality_small.png"
+    },
+    "prism-007": {
+      "name": "광대 대학 (-)",
+      "sourceName": "광대 대학",
+      "sourceId": 1310,
+      "file": "/assets/augments/prism-007.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/clowncollege_small.png"
+    },
+    "prism-008": {
+      "name": "궁극기 대변혁 (★★)",
+      "sourceName": "궁극기 대변혁",
+      "sourceId": 1088,
+      "file": "/assets/augments/prism-008.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/ultimaterevolution_small.png"
+    },
+    "prism-009": {
+      "name": "기본으로 돌아가기",
+      "sourceName": "기본으로 돌아가기",
+      "sourceId": 1004,
+      "file": "/assets/augments/prism-009.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/backtobasics_small.png"
+    },
+    "prism-010": {
+      "name": "난공불락 (-)",
+      "sourceName": "난공불락",
+      "sourceId": 1011,
+      "file": "/assets/augments/prism-010.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/canttouchthis_small.png"
+    },
+    "prism-011": {
+      "name": "능력치 더하기 능력치 더하기 능력치!",
+      "sourceName": "능력치 더하기 능력치 더하기 능력치!",
+      "sourceId": 1402,
+      "file": "/assets/augments/prism-011.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/statsonstatsonstats_small.png"
+    },
+    "prism-012": {
+      "name": "대지의 각성",
+      "sourceName": "대지의 각성",
+      "sourceId": 1027,
+      "file": "/assets/augments/prism-012.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/earthwake_small.png"
+    },
+    "prism-013": {
+      "name": "도망갈 수 없어 (-)",
+      "sourceName": "도망갈 수 없어",
+      "sourceId": 1413,
+      "file": "/assets/augments/prism-013.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/stuckinherewithme_small.png"
+    },
+    "prism-014": {
+      "name": "돌진",
+      "sourceName": "돌진",
+      "sourceId": 1019,
+      "file": "/assets/augments/prism-014.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dashing_small.png"
+    },
+    "prism-015": {
+      "name": "미친 과학자 (★★)",
+      "sourceName": "미친 과학자",
+      "sourceId": 1053,
+      "file": "/assets/augments/prism-015.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/madscientist_small.png"
+    },
+    "prism-016": {
+      "name": "보석 건틀릿",
+      "sourceName": "보석 건틀릿",
+      "sourceId": 1048,
+      "file": "/assets/augments/prism-016.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/jeweledgauntlet_small.png"
+    },
+    "prism-017": {
+      "name": "불길한 서약",
+      "sourceName": "불길한 서약",
+      "sourceId": 1332,
+      "file": "/assets/augments/prism-017.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/wisdomofages_small.png"
+    },
+    "prism-018": {
+      "name": "신비한 주먹 (-)",
+      "sourceName": "신비한 주먹",
+      "sourceId": 1058,
+      "file": "/assets/augments/prism-018.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/mysticpunch_small.png"
+    },
+    "prism-019": {
+      "name": "양손잡이",
+      "sourceName": "양손잡이",
+      "sourceId": 1225,
+      "file": "/assets/augments/prism-019.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dualwield_small.png"
+    },
+    "prism-020": {
+      "name": "요정 마법",
+      "sourceName": "요정 마법",
+      "sourceId": 1194,
+      "file": "/assets/augments/prism-020.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/feymagic_small.png"
+    },
+    "prism-021": {
+      "name": "유레카",
+      "sourceName": "유레카",
+      "sourceId": 1030,
+      "file": "/assets/augments/prism-021.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/eureka_small.png"
+    },
+    "prism-022": {
+      "name": "유리 대포",
+      "sourceName": "유리 대포",
+      "sourceId": 1325,
+      "file": "/assets/augments/prism-022.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/glasscannon_small.png"
+    },
+    "prism-023": {
+      "name": "전능의 영혼 (★★★)",
+      "sourceName": "전능의 영혼",
+      "sourceId": 1062,
+      "file": "/assets/augments/prism-023.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/omnisoul_small.png"
+    },
+    "prism-024": {
+      "name": "전장의 교향곡",
+      "sourceName": "전장의 교향곡",
+      "sourceId": 1079,
+      "file": "/assets/augments/prism-024.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/symphonyofwar_small.png"
+    },
+    "prism-025": {
+      "name": "전환: 혼돈",
+      "sourceName": "전환: 혼돈",
+      "sourceId": 1243,
+      "file": "/assets/augments/prism-025.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/transmutechaos_small.png"
+    },
+    "prism-026": {
+      "name": "죽음의 순환",
+      "sourceName": "죽음의 순환",
+      "sourceId": 1015,
+      "file": "/assets/augments/prism-026.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/circleofdeath_small.png"
+    },
+    "prism-027": {
+      "name": "지옥의 전도체",
+      "sourceName": "지옥의 전도체",
+      "sourceId": 1045,
+      "file": "/assets/augments/prism-027.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/infernalconduit_small.png"
+    },
+    "prism-028": {
+      "name": "최상급 조준경 부착",
+      "sourceName": "최상급 조준경 부착",
+      "sourceId": 1115,
+      "file": "/assets/augments/prism-028.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/scopiestweapons_small.png"
+    },
+    "prism-029": {
+      "name": "최종 형태",
+      "sourceName": "최종 형태",
+      "sourceId": 1344,
+      "file": "/assets/augments/prism-029.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/finalform_small.png"
+    },
+    "prism-030": {
+      "name": "퀘스트: 우글렛의 마녀 모자",
+      "sourceName": "퀘스트: 우글렛의 마녀 모자",
+      "sourceId": 156,
+      "file": "/assets/augments/prism-030.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/quest_woogletswitchcap_small.png"
+    },
+    "prism-031": {
+      "name": "퀘스트: 이케시아의 몰락",
+      "sourceName": "이케시아의 몰락",
+      "sourceId": 1361,
+      "file": "/assets/augments/prism-031.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/quest_voidimmolation_small.png"
+    },
+    "prism-032": {
+      "name": "탭 댄서",
+      "sourceName": "탭 댄서",
+      "sourceId": 1081,
+      "file": "/assets/augments/prism-032.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/tapdancer_small.png"
+    },
+    "prism-033": {
+      "name": "판도라의 상자 (-)",
+      "sourceName": "판도라의 상자",
+      "sourceId": 12317,
+      "file": "/assets/augments/prism-033.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/pandoras_box_small.png"
+    },
+    "prism-034": {
+      "name": "프로틴 음료 (-)",
+      "sourceName": "프로틴 음료",
+      "sourceId": 1324,
+      "file": "/assets/augments/prism-034.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/proteinshake_small.png"
+    },
+    "prism-035": {
+      "name": "한 발에 두 놈",
+      "sourceName": "한 발에 두 놈",
+      "sourceId": 2010,
+      "file": "/assets/augments/prism-035.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dualwield_small.png"
+    },
+    "silver-001": {
+      "name": "감시의 장막",
+      "sourceName": "감시의 장막",
+      "sourceId": 1034,
+      "file": "/assets/augments/silver-001.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/poltergeist_small.png"
+    },
+    "silver-002": {
+      "name": "강타자",
+      "sourceName": "강타자",
+      "sourceId": 1181,
+      "file": "/assets/augments/silver-002.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/heavyhitter_small.png"
+    },
+    "silver-003": {
+      "name": "광신자",
+      "sourceName": "광신자",
+      "sourceId": 2009,
+      "file": "/assets/augments/silver-003.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/zealot_small.png"
+    },
+    "silver-004": {
+      "name": "궁극의 저지 불가",
+      "sourceName": "궁극의 저지 불가",
+      "sourceId": 1112,
+      "file": "/assets/augments/silver-004.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/ultimateunstoppable_small.png"
+    },
+    "silver-005": {
+      "name": "그림자 질주",
+      "sourceName": "그림자 질주",
+      "sourceId": 1073,
+      "file": "/assets/augments/silver-005.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/shadowrunner_small.png"
+    },
+    "silver-006": {
+      "name": "능력치!",
+      "sourceName": "능력치!",
+      "sourceId": 1404,
+      "file": "/assets/augments/silver-006.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/stats_small.png"
+    },
+    "silver-007": {
+      "name": "능수능란",
+      "sourceName": "능수능란",
+      "sourceId": 1022,
+      "file": "/assets/augments/silver-007.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/deft_small.png"
+    },
+    "silver-008": {
+      "name": "대지의 영혼",
+      "sourceName": "대지의 영혼",
+      "sourceId": 1057,
+      "file": "/assets/augments/silver-008.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/mountainsoul_small.png"
+    },
+    "silver-009": {
+      "name": "도주 계획",
+      "sourceName": "도주 계획",
+      "sourceId": 1333,
+      "file": "/assets/augments/silver-009.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/escapeplan_small.png"
+    },
+    "silver-010": {
+      "name": "도취",
+      "sourceName": "도취",
+      "sourceId": 2016,
+      "file": "/assets/augments/silver-010.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/juiced_small.png"
+    },
+    "silver-011": {
+      "name": "마법공학의 영혼",
+      "sourceName": "마법공학의 영혼",
+      "sourceId": 1416,
+      "file": "/assets/augments/silver-011.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/infernalsoul_small.png"
+    },
+    "silver-012": {
+      "name": "마법사 (물리)",
+      "sourceName": "마법사 (물리)",
+      "sourceId": 1206,
+      "file": "/assets/augments/silver-012.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/escapade_small.png"
+    },
+    "silver-013": {
+      "name": "민병대",
+      "sourceName": "민병대",
+      "sourceId": 1105,
+      "file": "/assets/augments/silver-013.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/homeguard_small.png"
+    },
+    "silver-014": {
+      "name": "바다의 영혼",
+      "sourceName": "바다의 영혼",
+      "sourceId": 1060,
+      "file": "/assets/augments/silver-014.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/oceansoul_small.png"
+    },
+    "silver-015": {
+      "name": "부식",
+      "sourceName": "부식",
+      "sourceId": 1028,
+      "file": "/assets/augments/silver-015.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/erosion_small.png"
+    },
+    "silver-016": {
+      "name": "불을 밝혀",
+      "sourceName": "불을 밝혀",
+      "sourceId": 1051,
+      "file": "/assets/augments/silver-016.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/lightemup_small.png"
+    },
+    "silver-017": {
+      "name": "사악한 정신",
+      "sourceName": "사악한 정신",
+      "sourceId": 1097,
+      "file": "/assets/augments/silver-017.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/witchfulthinking_small.png"
+    },
+    "silver-018": {
+      "name": "선혈포식",
+      "sourceName": "선혈포식",
+      "sourceId": 1138,
+      "file": "/assets/augments/silver-018.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/goredrink_small.png"
+    },
+    "silver-019": {
+      "name": "속전속결",
+      "sourceName": "속전속결",
+      "sourceId": 1026,
+      "file": "/assets/augments/silver-019.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dontblink_small.png"
+    },
+    "silver-020": {
+      "name": "순수주의자 - 마법사",
+      "sourceName": "순수주의자 - 마법사",
+      "sourceId": 2018,
+      "file": "/assets/augments/silver-020.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/puristcaster_small.png"
+    },
+    "silver-021": {
+      "name": "승리를 위한 회전",
+      "sourceName": "승리를 위한 회전",
+      "sourceId": 1214,
+      "file": "/assets/augments/silver-021.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/spintowin_small.png"
+    },
+    "silver-022": {
+      "name": "쌍둥이 불꽃",
+      "sourceName": "쌍둥이 불꽃",
+      "sourceId": 1415,
+      "file": "/assets/augments/silver-022.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/twinfire_small.png"
+    },
+    "silver-023": {
+      "name": "우당탕탕",
+      "sourceName": "우당탕탕",
+      "sourceId": 1136,
+      "file": "/assets/augments/silver-023.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/slaparound_small.png"
+    },
+    "silver-024": {
+      "name": "육중한 힘",
+      "sourceName": "육중한 힘",
+      "sourceId": 1007,
+      "file": "/assets/augments/silver-024.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/bluntforce_small.png"
+    },
+    "silver-025": {
+      "name": "음속 폭발",
+      "sourceName": "음속 폭발",
+      "sourceId": 1076,
+      "file": "/assets/augments/silver-025.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/sonicboom_small.png"
+    },
+    "silver-026": {
+      "name": "응급 처치 키트",
+      "sourceName": "응급처치 키트",
+      "sourceId": 1037,
+      "file": "/assets/augments/silver-026.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/firstaidkit_small.png"
+    },
+    "silver-027": {
+      "name": "적응형 능력치",
+      "sourceName": "적응형 능력치",
+      "sourceId": 1205,
+      "file": "/assets/augments/silver-027.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/adapt_small.png"
+    },
+    "silver-028": {
+      "name": "전환: 골드",
+      "sourceName": "전환: 골드",
+      "sourceId": 1237,
+      "file": "/assets/augments/silver-028.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/transmutegold_small.png"
+    },
+    "silver-029": {
+      "name": "점멸탄",
+      "sourceName": "점멸탄",
+      "sourceId": 1187,
+      "file": "/assets/augments/silver-029.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/flashbang_small.png"
+    },
+    "silver-030": {
+      "name": "정신 변환",
+      "sourceName": "정신 변환",
+      "sourceId": 1056,
+      "file": "/assets/augments/silver-030.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/mindtomatter_small.png"
+    },
+    "silver-031": {
+      "name": "조준경 부착",
+      "sourceName": "조준경 부착",
+      "sourceId": 1170,
+      "file": "/assets/augments/silver-031.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/scopedweapons_small.png"
+    },
+    "silver-032": {
+      "name": "지옥불 영혼",
+      "sourceName": "지옥불 영혼",
+      "sourceId": 1046,
+      "file": "/assets/augments/silver-032.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/infernalsoul_small.png"
+    },
+    "silver-033": {
+      "name": "징수의 총 업그레이드",
+      "sourceName": "징수의 총 업그레이드",
+      "sourceId": 1320,
+      "file": "/assets/augments/silver-033.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradecollector_small.png"
+    },
+    "silver-034": {
+      "name": "차가운 냉기",
+      "sourceName": "차가운 냉기",
+      "sourceId": 1044,
+      "file": "/assets/augments/silver-034.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/icecold_small.png"
+    },
+    "silver-035": {
+      "name": "태풍",
+      "sourceName": "태풍",
+      "sourceId": 1087,
+      "file": "/assets/augments/silver-035.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/typhoon_small.png"
+    },
+    "silver-036": {
+      "name": "폴터가이스트",
+      "sourceName": "폴터가이스트",
+      "sourceId": 1347,
+      "file": "/assets/augments/silver-036.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/poltergeist_small.png"
+    },
+    "silver-037": {
+      "name": "하체 운동의 날",
+      "sourceName": "하체 운동의 날",
+      "sourceId": 1305,
+      "file": "/assets/augments/silver-037.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/legday_small.png"
+    },
+    "silver-038": {
+      "name": "확보된 킬",
+      "sourceName": "확보된 킬",
+      "sourceId": 2026,
+      "file": "/assets/augments/silver-038.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/killsecure_small.png"
+    },
+    "silver-039": {
+      "name": "확률적 방어",
+      "sourceName": "확률적 방어",
+      "sourceId": 1080,
+      "file": "/assets/augments/silver-039.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/tankitorleaveit_small.png"
+    },
+    "silver-040": {
+      "name": "다단 중첩",
+      "sourceName": "다단 중첩",
+      "sourceId": 1204,
+      "file": "/assets/augments/silver-040.png",
+      "url": "https://raw.communitydragon.org/16.21/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/stackosaurusrex_small.png"
+    }
+  },
+  "missing": [],
+  "failed": []
+}

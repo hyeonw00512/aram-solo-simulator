@@ -1,0 +1,10 @@
+import type {Game,Role,Unit} from '../engine/types';
+import {AbyssScenery} from './AbyssScenery';
+import './matchup-screen.css';
+const roleNames:Record<Role,string>={tank:'탱커',fighter:'전사',mage:'마법사',marksman:'원거리 딜러',support:'서포터',assassin:'암살자'};
+export function composition(team:Unit[]){return (Object.keys(roleNames) as Role[]).map(role=>({role,name:roleNames[role],count:team.filter(u=>u.champion.roles.includes(role)).length})).filter(r=>r.count>0);}
+export function MatchupScreen({game}:{game:Game}){
+ const remaining=game.matchupRemaining??7;
+ const teamRow=(team:Unit[],side:'blue'|'red')=><section className={`matchup-team ${side}`} aria-label={side==='blue'?'아군 조합':'상대 조합'}><div className="matchup-team-title"><h2>{side==='blue'?'우리 팀':'상대 팀'} <small>{side.toUpperCase()} TEAM</small></h2><div className="composition-tags">{composition(team).map(r=><span key={r.role}>{r.name} <b>{r.count}</b></span>)}</div></div><div className="matchup-cards">{team.map(u=><article key={u.id} className={u.id===game.playerId?'is-player':''}><div className="matchup-portrait"><img src={`/assets/champions/${u.champion.id}.png`} alt=""/>{u.id===game.playerId&&<em>나</em>}</div><h3>{u.champion.name}</h3><p>{u.champion.roles.map(r=>roleNames[r]).join(' · ')}</p></article>)}</div></section>;
+ return <main className="matchup-screen" aria-label="양 팀 대결 미리보기"><div className="matchup-scenery" aria-hidden="true"><svg viewBox="0 0 900 560" preserveAspectRatio="xMidYMid slice"><AbyssScenery/></svg></div><header><span>HOWLING ABYSS</span><h1>칼바람 나락</h1><p>열 명의 챔피언, 하나의 전장</p></header>{teamRow(game.blue,'blue')}<div className="matchup-versus"><i/><strong>VS</strong><i/></div>{teamRow(game.red,'red')}<footer><div className="matchup-countdown" role="timer">전장 입장까지 <b>{remaining}</b>초</div><div className="matchup-progress" role="progressbar" aria-label="전장 입장 준비" aria-valuemin={0} aria-valuemax={7} aria-valuenow={7-remaining}><i style={{width:`${(7-remaining)/7*100}%`}}/></div><p>입장 후 증강과 아이템 준비 · 기본 역할 기준, 겸직 포함 · 빌드에 따라 역할이 달라집니다</p></footer></main>;
+}

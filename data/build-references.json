@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-28",
+  "patch": "16.21",
+  "note": "OP.GG 챔피언 페이지에서 확인한 추천 목록 중 현재 구현된 증강만 참고한다. 숫자 티어·승률은 수집되지 않았으며 아래 가중치는 자체 시너지 점수다. 나머지 챔피언은 스킬·빌드 기반 규칙을 사용한다.",
+  "champions": {
+    "Ahri": {"url":"https://op.gg/lol/modes/aram-mayhem/ahri/augments","augments":["마법 미사일","극악무도"]},
+    "Malphite": {"url":"https://op.gg/lol/modes/aram-mayhem/malphite/build","augments":["궁극기 대변혁","급속 성장"]},
+    "Nami": {"url":"https://op.gg/lol/modes/aram-mayhem/nami/build","augments":["응급 처치 키트"]},
+    "Ashe": {"url":"https://op.gg/lol/modes/aram-mayhem/ashe/build","augments":[]}
+  }
+}

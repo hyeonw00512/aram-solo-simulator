@@ -1,0 +1,871 @@
+{
+  "source": "Riot Data Dragon",
+  "version": "16.21.1",
+  "champions": {
+    "Aatrox": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Ahri": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Akali": {
+      "kind": "energy",
+      "regen": 50,
+      "regenGrowth": 0
+    },
+    "Akshan": {
+      "kind": "mana",
+      "regen": 8.2,
+      "regenGrowth": 0.7
+    },
+    "Alistar": {
+      "kind": "mana",
+      "regen": 8.5,
+      "regenGrowth": 0.8
+    },
+    "Ambessa": {
+      "kind": "energy",
+      "regen": 50,
+      "regenGrowth": 0
+    },
+    "Amumu": {
+      "kind": "mana",
+      "regen": 7.4,
+      "regenGrowth": 0.55
+    },
+    "Anivia": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Annie": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Aphelios": {
+      "kind": "mana",
+      "regen": 6.5,
+      "regenGrowth": 0.4
+    },
+    "Ashe": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.65
+    },
+    "AurelionSol": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.75
+    },
+    "Aurora": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Azir": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Bard": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.45
+    },
+    "Belveth": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Blitzcrank": {
+      "kind": "mana",
+      "regen": 8.5,
+      "regenGrowth": 0.8
+    },
+    "Brand": {
+      "kind": "mana",
+      "regen": 11,
+      "regenGrowth": 0.6
+    },
+    "Braum": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.8
+    },
+    "Briar": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Caitlyn": {
+      "kind": "mana",
+      "regen": 7.4,
+      "regenGrowth": 0.7
+    },
+    "Camille": {
+      "kind": "mana",
+      "regen": 8.15,
+      "regenGrowth": 0.75
+    },
+    "Cassiopeia": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Chogath": {
+      "kind": "mana",
+      "regen": 7.2,
+      "regenGrowth": 0.45
+    },
+    "Corki": {
+      "kind": "mana",
+      "regen": 7.4,
+      "regenGrowth": 0.7
+    },
+    "Darius": {
+      "kind": "mana",
+      "regen": 6.6,
+      "regenGrowth": 0.35
+    },
+    "Diana": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "DrMundo": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Draven": {
+      "kind": "mana",
+      "regen": 8.05,
+      "regenGrowth": 0.65
+    },
+    "Ekko": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.8
+    },
+    "Elise": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Evelynn": {
+      "kind": "mana",
+      "regen": 8.11,
+      "regenGrowth": 0.6
+    },
+    "Ezreal": {
+      "kind": "mana",
+      "regen": 8.5,
+      "regenGrowth": 1
+    },
+    "Fiddlesticks": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Fiora": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.7
+    },
+    "Fizz": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Galio": {
+      "kind": "mana",
+      "regen": 9.5,
+      "regenGrowth": 0.7
+    },
+    "Gangplank": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.7
+    },
+    "Garen": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Gnar": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Gragas": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Graves": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.7
+    },
+    "Gwen": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 0.7
+    },
+    "Hecarim": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.8
+    },
+    "Heimerdinger": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Hwei": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 0.75
+    },
+    "Illaoi": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 0.75
+    },
+    "Irelia": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Ivern": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.75
+    },
+    "Janna": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.4
+    },
+    "JarvanIV": {
+      "kind": "mana",
+      "regen": 6.5,
+      "regenGrowth": 0.45
+    },
+    "Jax": {
+      "kind": "mana",
+      "regen": 8.2,
+      "regenGrowth": 0.7
+    },
+    "Jayce": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Jhin": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Jinx": {
+      "kind": "mana",
+      "regen": 6.7,
+      "regenGrowth": 1
+    },
+    "KSante": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 1
+    },
+    "Kaisa": {
+      "kind": "mana",
+      "regen": 8.2,
+      "regenGrowth": 0.7
+    },
+    "Kalista": {
+      "kind": "mana",
+      "regen": 6.3,
+      "regenGrowth": 0.8
+    },
+    "Karma": {
+      "kind": "mana",
+      "regen": 13,
+      "regenGrowth": 0.8
+    },
+    "Karthus": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Kassadin": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Katarina": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Kayle": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Kayn": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.95
+    },
+    "Kennen": {
+      "kind": "energy",
+      "regen": 50,
+      "regenGrowth": 0
+    },
+    "Khazix": {
+      "kind": "mana",
+      "regen": 7.59,
+      "regenGrowth": 0.5
+    },
+    "Kindred": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.4
+    },
+    "Kled": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "KogMaw": {
+      "kind": "mana",
+      "regen": 8.75,
+      "regenGrowth": 0.7
+    },
+    "Leblanc": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "LeeSin": {
+      "kind": "energy",
+      "regen": 50,
+      "regenGrowth": 0
+    },
+    "Leona": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Lillia": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.95
+    },
+    "Lissandra": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.4
+    },
+    "Locke": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.8
+    },
+    "Lucian": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.8
+    },
+    "Lulu": {
+      "kind": "mana",
+      "regen": 11,
+      "regenGrowth": 0.6
+    },
+    "Lux": {
+      "kind": "mana",
+      "regen": 9,
+      "regenGrowth": 0.8
+    },
+    "Malphite": {
+      "kind": "mana",
+      "regen": 7.3,
+      "regenGrowth": 0.55
+    },
+    "Malzahar": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Maokai": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.6
+    },
+    "MasterYi": {
+      "kind": "mana",
+      "regen": 7.25,
+      "regenGrowth": 0.45
+    },
+    "Mel": {
+      "kind": "mana",
+      "regen": 9,
+      "regenGrowth": 0.9
+    },
+    "Milio": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.4
+    },
+    "MissFortune": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "MonkeyKing": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Mordekaiser": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Morgana": {
+      "kind": "mana",
+      "regen": 11,
+      "regenGrowth": 0.4
+    },
+    "Naafiri": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 1
+    },
+    "Nami": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.4
+    },
+    "Nasus": {
+      "kind": "mana",
+      "regen": 7.45,
+      "regenGrowth": 0.5
+    },
+    "Nautilus": {
+      "kind": "mana",
+      "regen": 8.65,
+      "regenGrowth": 0.5
+    },
+    "Neeko": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.7
+    },
+    "Nidalee": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Nilah": {
+      "kind": "mana",
+      "regen": 8.2,
+      "regenGrowth": 0.7
+    },
+    "Nocturne": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.45
+    },
+    "Nunu": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.5
+    },
+    "Olaf": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 0.6
+    },
+    "Orianna": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Ornn": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.6
+    },
+    "Pantheon": {
+      "kind": "mana",
+      "regen": 7.35,
+      "regenGrowth": 0.45
+    },
+    "Poppy": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.7
+    },
+    "Pyke": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 1
+    },
+    "Qiyana": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.7
+    },
+    "Quinn": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.4
+    },
+    "Rakan": {
+      "kind": "mana",
+      "regen": 8.75,
+      "regenGrowth": 0.5
+    },
+    "Rammus": {
+      "kind": "mana",
+      "regen": 7.85,
+      "regenGrowth": 0.5
+    },
+    "RekSai": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Rell": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.7
+    },
+    "Renata": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.5
+    },
+    "Renekton": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Rengar": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Riven": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Rumble": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Ryze": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 1
+    },
+    "Samira": {
+      "kind": "mana",
+      "regen": 8.2,
+      "regenGrowth": 0.7
+    },
+    "Sejuani": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.7
+    },
+    "Senna": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.7
+    },
+    "Seraphine": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.95
+    },
+    "Sett": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Shaco": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.35
+    },
+    "Shen": {
+      "kind": "energy",
+      "regen": 50,
+      "regenGrowth": 0
+    },
+    "Shyvana": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Singed": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 0.55
+    },
+    "Sion": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.6
+    },
+    "Sivir": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Skarner": {
+      "kind": "mana",
+      "regen": 7.2,
+      "regenGrowth": 0.75
+    },
+    "Smolder": {
+      "kind": "mana",
+      "regen": 8.5,
+      "regenGrowth": 0.7
+    },
+    "Sona": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.4
+    },
+    "Soraka": {
+      "kind": "mana",
+      "regen": 11.5,
+      "regenGrowth": 0.4
+    },
+    "Swain": {
+      "kind": "mana",
+      "regen": 10,
+      "regenGrowth": 0.8
+    },
+    "Sylas": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Syndra": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "TahmKench": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 1
+    },
+    "Taliyah": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Talon": {
+      "kind": "mana",
+      "regen": 7.6,
+      "regenGrowth": 0.8
+    },
+    "Taric": {
+      "kind": "mana",
+      "regen": 8.5,
+      "regenGrowth": 0.8
+    },
+    "Teemo": {
+      "kind": "mana",
+      "regen": 9.6,
+      "regenGrowth": 0.45
+    },
+    "Thresh": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Tristana": {
+      "kind": "mana",
+      "regen": 7.2,
+      "regenGrowth": 0.45
+    },
+    "Trundle": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 0.6
+    },
+    "Tryndamere": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "TwistedFate": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Twitch": {
+      "kind": "mana",
+      "regen": 7.25,
+      "regenGrowth": 0.7
+    },
+    "Udyr": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 0.45
+    },
+    "Urgot": {
+      "kind": "mana",
+      "regen": 7.25,
+      "regenGrowth": 0.8
+    },
+    "Varus": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Vayne": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.4
+    },
+    "Veigar": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Velkoz": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Vex": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Vi": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.65
+    },
+    "Viego": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Viktor": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Vladimir": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Volibear": {
+      "kind": "mana",
+      "regen": 6.25,
+      "regenGrowth": 0.5
+    },
+    "Warwick": {
+      "kind": "mana",
+      "regen": 7.45,
+      "regenGrowth": 0.6
+    },
+    "Xayah": {
+      "kind": "mana",
+      "regen": 8.25,
+      "regenGrowth": 0.8
+    },
+    "Xerath": {
+      "kind": "mana",
+      "regen": 6.85,
+      "regenGrowth": 0.8
+    },
+    "XinZhao": {
+      "kind": "mana",
+      "regen": 7.25,
+      "regenGrowth": 0.45
+    },
+    "Yasuo": {
+      "kind": "flow",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Yone": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Yorick": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 0.75
+    },
+    "Yunara": {
+      "kind": "mana",
+      "regen": 7.5,
+      "regenGrowth": 0.75
+    },
+    "Yuumi": {
+      "kind": "mana",
+      "regen": 10,
+      "regenGrowth": 0.4
+    },
+    "Zaahen": {
+      "kind": "mana",
+      "regen": 8.15,
+      "regenGrowth": 0.75
+    },
+    "Zac": {
+      "kind": "none",
+      "regen": 0,
+      "regenGrowth": 0
+    },
+    "Zed": {
+      "kind": "energy",
+      "regen": 50,
+      "regenGrowth": 0
+    },
+    "Zeri": {
+      "kind": "mana",
+      "regen": 6,
+      "regenGrowth": 0.8
+    },
+    "Ziggs": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.8
+    },
+    "Zilean": {
+      "kind": "mana",
+      "regen": 11.35,
+      "regenGrowth": 0.8
+    },
+    "Zoe": {
+      "kind": "mana",
+      "regen": 8,
+      "regenGrowth": 0.65
+    },
+    "Zyra": {
+      "kind": "mana",
+      "regen": 7,
+      "regenGrowth": 0.8
+    }
+  }
+}

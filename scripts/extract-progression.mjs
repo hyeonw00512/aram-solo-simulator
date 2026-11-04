@@ -1,0 +1,17 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const raw=JSON.parse(await readFile(new URL('../data/raw/map12.bin.json',import.meta.url),'utf8'));
+const configPath=new URL('../data/progression.json',import.meta.url),rules=JSON.parse(await readFile(configPath,'utf8'));
+const aram=raw['Maps/Shipping/Map12/Modes/ARAM'],mayhem=raw['Maps/Shipping/Map12/Modes/KIWI'];
+for(const field of ['mExperienceCurveData','mExperienceModData','mDeathTimes'])if(aram[field]!==mayhem[field])throw new Error(`ARAM/Mayhem rules differ: ${field}`);
+const curve=raw[aram.mExperienceCurveData],xp=raw[aram.mExperienceModData],death=raw[aram.mDeathTimes];
+const cumulative=curve.mExperienceRequiredPerLevel;
+rules.mapSource={version:'16.21',url:'https://raw.communitydragon.org/16.21/game/maps/shipping/map12/map12.bin.json',modes:['ARAM','KIWI'],references:{curve:aram.mExperienceCurveData,xp:aram.mExperienceModData,death:aram.mDeathTimes}};
+rules.xpToNextFromLevel3=cumulative.slice(2,17).map((n,i)=>n-cumulative[i+1]);
+rules.respawnSecondsFromLevel3=death.mTimeDeadPerLevel.slice(2,18);
+rules.respawnScaling={startSeconds:death.mScalingStartTime,stepSeconds:death.mScalingIncrementTime,perStep:Number(death.mScalingPercentIncrease.toFixed(6)),maxMultiplier:death.mScalingPercentCap};
+rules.minionXpShareByRecipients=xp.mPlayerMinionSplitXp.map(n=>Number(n.toFixed(6)));
+rules.championBaseXp=curve.mExperienceGrantedForKillPerLevel.slice(0,18);
+rules.championXpApproximation.levelDifferenceBonus=Number(curve.LevelDifferenceExperienceMultiplierPerLevel[0].toFixed(6));
+delete rules.championSoloXp;delete rules.sharedMinionMultiplier;delete rules.championXpApproximation.sharedMultiplier;
+await writeFile(configPath,JSON.stringify(rules,null,2)+'\n');
+console.log(JSON.stringify({xp:rules.xpToNextFromLevel3,respawn:rules.respawnScaling,sharing:rules.minionXpShareByRecipients}));

@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-10-29",
+  "sources": [
+    "https://wiki.leagueoflegends.com/en-us/Experience_%28champion%29",
+    "https://wiki.leagueoflegends.com/en-us/ARAM",
+    "https://wiki.leagueoflegends.com/en-us/Champion_statistics",
+    "https://www.leagueoflegends.com/en-us/news/game-updates/patch-13-4-notes/"
+  ],
+  "startLevel": 3,
+  "maxLevel": 18,
+  "xpToNextFromLevel3": [
+    478,
+    510,
+    750,
+    780,
+    880,
+    980,
+    1080,
+    1180,
+    1280,
+    1380,
+    1480,
+    1580,
+    1680,
+    1780,
+    1880
+  ],
+  "passiveXpPerSecond": 5,
+  "respawnSecondsFromLevel3": [
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40
+  ],
+  "minionXp": {
+    "melee": 64,
+    "caster": 32,
+    "cannon": 94,
+    "super": 100
+  },
+  "minionXpRange": 1500,
+  "championXpRange": 1600,
+  "championDeathGraceSeconds": 10,
+  "championXpApproximation": {
+    "levelDifferenceBonus": 0.16,
+    "maxBonus": 2,
+    "minMultiplier": 0.4
+  },
+  "mapSource": {
+    "version": "16.21",
+    "url": "https://raw.communitydragon.org/16.21/game/maps/shipping/map12/map12.bin.json",
+    "modes": [
+      "ARAM",
+      "KIWI"
+    ],
+    "references": {
+      "curve": "{d88e5d96}",
+      "xp": "{45163f15}",
+      "death": "{a40f595b}"
+    }
+  },
+  "respawnScaling": {
+    "startSeconds": 1440,
+    "stepSeconds": 60,
+    "perStep": 0.025,
+    "maxMultiplier": 1.25
+  },
+  "minionXpShareByRecipients": [
+    0.92,
+    0.6,
+    0.4,
+    0.3,
+    0.24
+  ],
+  "championBaseXp": [
+    35,
+    95,
+    155,
+    215,
+    275,
+    335,
+    395,
+    455,
+    515,
+    590,
+    640,
+    690,
+    740,
+    790,
+    840,
+    890,
+    940,
+    990
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source": "https://www.leagueoflegends.com/en-ph/news/game-updates/aram-2023-preview/",
+  "note": "기지에서 전방 포탑으로 복귀. 시간·거리·개인 재사용 대기는 이 시뮬레이션의 설계값. 외곽 포탑 파괴 후 두 번째 포탑 앞으로 출구 이동, 이후 유지. 적 기지 포탈 사용은 미구현. 건물 좌표는 16.21 Map12 원본, 포탈 오프셋은 추정.",
+  "entranceRange": 12,
+  "travelSeconds": 2,
+  "reuseSeconds": 15,
+  "playerAutoSeconds": 12,
+  "walkStep": 5
+}

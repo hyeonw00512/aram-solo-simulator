@@ -1,0 +1,30 @@
+{
+  "name": "text-chaos-brawl",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "fetch:data": "tsx scripts/fetch-ddragon.ts",
+    "fetch:augments": "tsx scripts/fetch-augments.ts",
+    "report:data": "tsx scripts/report-data.ts",
+    "tag:champions": "tsx scripts/tag-champions.ts",
+    "simulate:1000": "tsx scripts/simulate-1000.ts",
+    "check:decisions": "tsx scripts/check-decisions.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2",
+    "vitest": "^4.0.8"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}

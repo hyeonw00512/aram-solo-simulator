@@ -1,0 +1,110 @@
+{
+  "version": "16.21",
+  "source": "Riot game CharacterRecord via CommunityDragon",
+  "reason": "Data Dragon attackdamageperlevel is zero; attack speed ratio is not exposed",
+  "champions": {
+    "Ahri": {
+      "attackdamageperlevel": 3.0,
+      "attackspeedratio": 0.625,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/ahri/ahri.bin.json"
+    },
+    "Ashe": {
+      "attackdamageperlevel": 3.0,
+      "attackspeedratio": 0.658,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/ashe/ashe.bin.json"
+    },
+    "Blitzcrank": {
+      "attackdamageperlevel": 3.5,
+      "attackspeedratio": 0.625,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/blitzcrank/blitzcrank.bin.json"
+    },
+    "Darius": {
+      "attackdamageperlevel": 5.0,
+      "attackspeedratio": 0.625,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/darius/darius.bin.json"
+    },
+    "Janna": {
+      "attackdamageperlevel": 2.5,
+      "attackspeedratio": 0.625,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/janna/janna.bin.json"
+    },
+    "Kaisa": {
+      "attackdamageperlevel": 2.6,
+      "attackspeedratio": 0.644,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/kaisa/kaisa.bin.json"
+    },
+    "Kennen": {
+      "attackdamageperlevel": 3.75,
+      "attackspeedratio": 0.69,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/kennen/kennen.bin.json"
+    },
+    "Leona": {
+      "attackdamageperlevel": 3.0,
+      "attackspeedratio": 0.625,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/leona/leona.bin.json"
+    },
+    "Lux": {
+      "attackdamageperlevel": 3.3,
+      "attackspeedratio": 0.625,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/lux/lux.bin.json"
+    },
+    "Malphite": {
+      "attackdamageperlevel": 4.0,
+      "attackspeedratio": 0.638,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/malphite/malphite.bin.json"
+    },
+    "Morgana": {
+      "attackdamageperlevel": 3.5,
+      "attackspeedratio": 0.625,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/morgana/morgana.bin.json"
+    },
+    "Nami": {
+      "attackdamageperlevel": 3.1,
+      "attackspeedratio": 0.644,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/nami/nami.bin.json"
+    },
+    "Sona": {
+      "attackdamageperlevel": 3.0,
+      "attackspeedratio": 0.644,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/sona/sona.bin.json"
+    },
+    "Veigar": {
+      "attackdamageperlevel": 2.7,
+      "attackspeedratio": 0.625,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/veigar/veigar.bin.json"
+    },
+    "Vex": {
+      "attackdamageperlevel": 2.75,
+      "attackspeedratio": 0.625,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/vex/vex.bin.json"
+    },
+    "Yasuo": {
+      "attackdamageperlevel": 2.5,
+      "attackspeedratio": 0.67,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/yasuo/yasuo.bin.json"
+    },
+    "Evelynn": {
+      "attackdamageperlevel": 3,
+      "attackspeedratio": 0.6669999957084656,
+      "source": "https://raw.communitydragon.org/16.21/game/data/characters/evelynn/evelynn.bin.json"
+    },
+    "Ornn": {
+      "attackdamageperlevel": 3.5,
+      "attackspeedratio": 0.625,
+      "source": "https://ddragon.leagueoflegends.com/cdn/15.24.1/data/en_US/champion/Ornn.json",
+      "note": "AD growth from Riot 15.24.1; attack speed ratio approximated by base attack speed."
+    },
+    "Garen": {
+      "attackdamageperlevel": 4.5,
+      "attackspeedratio": 0.625,
+      "source": "https://ddragon.leagueoflegends.com/cdn/15.24.1/data/en_US/champion/Garen.json",
+      "note": "AD growth from Riot 15.24.1; attack speed ratio approximated by base attack speed."
+    },
+    "Aatrox": {
+      "attackdamageperlevel": 5,
+      "attackspeedratio": 0.651,
+      "source": "https://ddragon.leagueoflegends.com/cdn/15.24.1/data/en_US/champion/Aatrox.json",
+      "note": "AD growth from Riot 15.24.1; attack speed ratio approximated by base attack speed."
+    }
+  }
+}

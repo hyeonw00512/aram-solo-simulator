@@ -1,0 +1,8 @@
+{
+  "waveSeconds": 3, "waves": 4, "decisionInterval": 35, "deathDecisionGap": 10,
+  "step": 9, "retreatStep": 13, "range": 24, "pokeRange": 33, "towerBlue": 20, "towerRed": 80,
+  "baseDamage": 10, "powerDamage": 0.04, "randomDamage": 0.45, "cooldownSeconds": 9,
+  "towerDamage": 24, "coverMultiplier": 0.6, "pokeMultiplier": 0.65, "coverReduction": 0.55,
+  "respawnSeconds": 24, "respawnPerLevel": 1, "killGold": 300,
+  "weights": { "baseline": 0.1, "aggression": 2, "cohesion": 2.5, "injury": 3, "outnumbered": 2, "cooldown": 1.8, "distance": 2, "misread": 1.2, "pursuit": 2, "towerFear": 3, "pokeTrait": 4, "risk": 2, "loss": 2, "hesitation": 1, "withdrawFollow": 6, "withdrawMomentum": 4 }
+}
