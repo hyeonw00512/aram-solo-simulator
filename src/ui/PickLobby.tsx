@@ -8,7 +8,7 @@ export function PickLobby({game,update,onReset}:{game:Game;update:(op:(g:Game)=>
  const lobby=game.lobby!,player=game.blue[0],editing=picking(game)&&!lobby.locked,t=lobby.trade,partner=game.blue.find(u=>u.id===t?.partnerId);
  return <main className="pick-screen">
   <div className="pick-scenery" aria-hidden="true"><svg viewBox="0 0 900 560" preserveAspectRatio="xMidYMid slice"><AbyssScenery/></svg></div>
-  <header className="pick-header"><div><span className="eyebrow">HOWLING ABYSS · SOLO</span><h1>무작위 총력전 <span>아수라장</span></h1><p>다섯 명의 선택, 하나의 외길</p></div><button onClick={onReset}>새 경기</button></header>
+  <header className="pick-header"><div><span className="eyebrow">HOWLING ABYSS · SOLO</span><h1>무작위 총력전 <span>아수라장</span></h1></div><button onClick={onReset}>새 경기</button></header>
   <ol className="pick-steps" aria-label="경기 준비 단계">{['챔피언 선택','5 vs 5 조합 확인','전장 입장'].map((name,i)=><li key={name} className={(editing?0:game.phase==='augment'?1:2)===i?'current':''}><b>0{i+1}</b>{name}</li>)}</ol>
   <section className="pick-bench" aria-label="후보 챔피언"><div className="pick-section-title"><h2>후보 챔피언</h2><span>{editing?'선택하면 현재 챔피언과 교체됩니다':'챔피언 선택 완료'}</span></div><div className="bench-cards">{lobby.bench.map(id=>{const c=playableChampions.find(c=>c.id===id);return c&&<button key={id} disabled={!editing||!!t} onClick={()=>update(g=>{chooseBenchChampion(g,id)})} title={c.roles.map(r=>roles[r]).join(' · ')} aria-label={`${c.name} 선택`}><img src={`/assets/champions/${id}.png`} alt=""/><strong>{c.name}</strong><small>{c.roles.map(r=>roles[r]).join(' · ')}</small></button>})}</div></section>
   <div className="pick-main">
