@@ -35,7 +35,7 @@ export function forgeReason(g:Game,u:Unit):string|undefined {
  if([...g.blue,...g.red].some(v=>v.team!==u.team&&v.alive&&!v.atFountain&&!v.portal&&Math.abs(v.position-u.position)<25))return '적과 거리를 벌린 뒤 제작할 수 있습니다';
 }
 export function canShop(game:Game,unit:Unit){return baseShop(game,unit)||!forgeReason(game,unit);}
-export function purchaseReason(game: Game, unit: Unit, id: string) {
+export function purchaseRestriction(game: Game, unit: Unit, id: string) {
   const item = itemMap[id];
   if(unit.forge)return '현재 아이템을 제작 중입니다';
   if(!baseShop(game,unit)&&unit.champion.id==='Ornn'){
@@ -48,12 +48,53 @@ export function purchaseReason(game: Game, unit: Unit, id: string) {
   if (unavailableItems[id]) return unavailableItems[id]+" · 아직 구매할 수 없습니다";
   if(item.tags.includes("Consumable")&&!itemEffects[id])return "이 소모품 효과는 아직 지원되지 않습니다";
   const quote = componentQuote(id, unit.items);
-  if (quote.price > unit.gold) return `${quote.price - unit.gold}G 부족`;
-  if (quote.remaining.length >= config.economy.inventorySlots) return "아이템 슬롯이 가득 찼습니다";
   const completed = (item.depth ?? 0) >= 3 || (!!item.from?.length && !item.into?.length);
   if (quote.remaining.includes(id) && completed) return "이 완성 아이템을 이미 보유하고 있습니다";
   if (item.tags.includes("Boots") && quote.remaining.some(i => itemMap[i]?.tags.includes("Boots"))) return "장화는 하나만 보유할 수 있습니다";
   return undefined;
+}
+export function purchaseReason(game:Game,unit:Unit,id:string){
+ const restriction=purchaseRestriction(game,unit,id);if(restriction)return restriction;
+ const quote=componentQuote(id,unit.items);
+ if(quote.price>unit.gold)return `${quote.price-unit.gold}G 부족`;
+ if(quote.remaining.length>=config.economy.inventorySlots)return '아이템 슬롯이 가득 찼습니다';
+}
+
+export interface ItemPurchasePlan {goalId:string;steps:{id:string;price:number}[];total:number;components:boolean;reason?:string;}
+/** One goal's missing recipe only. Reserve owned occurrences, then prefer direct
+ * components over deeper pieces, in recipe order. Never sell to make room. */
+export function itemPurchasePlan(game:Game,unit:Unit,goalId:string):ItemPurchasePlan{
+ const plan:ItemPurchasePlan={goalId,steps:[],total:0,components:false};
+ const restriction=purchaseRestriction(game,unit,goalId);if(restriction)return {...plan,reason:restriction};
+ const direct=purchaseReason(game,unit,goalId),goalQuote=componentQuote(goalId,unit.items);
+ if(!direct)return {...plan,steps:[{id:goalId,price:goalQuote.price}],total:goalQuote.price};
+ // Partial buying is a response to insufficient gold, not a way around another restriction.
+ if(goalQuote.price<=unit.gold||!itemMap[goalId]?.from?.length)return {...plan,reason:direct};
+ plan.components=true;
+ const draft={...unit,items:[...unit.items]};
+ for(let step=0;step<64;step++){
+  const owned=[...draft.items],missing:{id:string;depth:number}[]=[];
+  const visit=(id:string,depth:number,path:Set<string>)=>{
+   if(path.has(id))return;
+   const index=owned.indexOf(id);if(index>=0){owned.splice(index,1);return;}
+   missing.push({id,depth});for(const child of itemMap[id]?.from??[])visit(child,depth+1,new Set([...path,id]));
+  };
+  for(const child of itemMap[goalId].from??[])visit(child,1,new Set([goalId]));
+  const before=componentQuote(goalId,draft.items).price;
+  const candidate=missing.sort((a,b)=>a.depth-b.depth).find(({id})=>{
+   if(purchaseReason(game,draft,id))return false;
+   const q=componentQuote(id,draft.items),afterItems=[...q.remaining,id],after=componentQuote(goalId,afterItems).price;
+   // Shared/repeated recipe pieces must still contribute their entire price to this goal.
+   return before-after>=q.price&&(q.price>0||afterItems.length<draft.items.length);
+  });
+  if(!candidate)break;
+  const q=componentQuote(candidate.id,draft.items);plan.steps.push({id:candidate.id,price:q.price});plan.total+=q.price;
+  draft.gold-=q.price;draft.items=[...q.remaining,candidate.id];
+  // Ornn's field crafting remains a single timed craft, not an instant shopping batch.
+  if(!baseShop(game,unit))break;
+ }
+ if(!plan.steps.length)plan.reason=draft.items.length>=config.economy.inventorySlots?'빈 슬롯이나 합성 가능한 재료가 없어 하위 아이템을 살 수 없습니다':`현재 골드로 구매 가능한 하위 아이템이 없습니다 · ${direct}`;
+ return plan;
 }
 
 export function itemBonuses(inventory: string[]) {

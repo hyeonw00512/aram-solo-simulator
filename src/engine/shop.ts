@@ -1,5 +1,5 @@
 import type { Game, Unit } from "./types";
-import { baseShop, canShop, forgeReason, itemBonuses, componentQuote, itemMap, purchaseReason, shopItems } from "./items";
+import { baseShop, canShop, forgeReason, itemBonuses, componentQuote, itemMap, purchaseReason, shopItems, itemPurchasePlan } from "./items";
 import {preferredPath,routeFor,ownsAntiHeal} from './build-advisor';
 import {state} from "./runtime";
 import {buildIdentity} from "./stats";
@@ -16,6 +16,13 @@ export function buyItem(game: Game, id: string, unit = game.blue[0], completedFo
   if(field){unit.health=Math.min(previousHp,unit.maxHealth);state(unit).procs.forgeReadyAt=game.time+90-80*(Math.min(18,unit.level)-1)/17;unit.status='간이 대장간 · 제작 완료';}
   game.logs.push({ time: game.time, text: `${unit.champion.name}: ${itemMap[id].name} 구매 (${quote.price}G${quote.consumed.length ? `, 하위 아이템 ${quote.consumed.map(c => itemMap[c].name).join(" · ")} 합성` : ""}).`, tone: "good" });
   return true;
+}
+export function buyItemGoal(game:Game,id:string,unit=game.blue[0]):boolean{
+ const plan=itemPurchasePlan(game,unit,id);if(plan.reason||!plan.steps.length)return false;
+ const bought:{id:string;price:number}[]=[];
+ for(const step of plan.steps){if(!buyItem(game,step.id,unit))break;bought.push(step);if(unit.forge)break;}
+ if(plan.components&&bought.length&&!unit.forge)game.logs.push({time:game.time,text:`${unit.champion.name}: ${itemMap[id].name}의 하위 재료 구매 — ${bought.map(s=>itemMap[s.id].name).join(' · ')} (${bought.reduce((sum,s)=>sum+s.price,0)}G).`,tone:'good'});
+ return bought.length>0;
 }
 export function sellItem(game: Game, index: number, unit = game.blue[0]) {
   const item = itemMap[unit.items[index]];
