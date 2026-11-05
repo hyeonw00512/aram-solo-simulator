@@ -9,6 +9,7 @@ import type { Game } from "./engine/types";
 import { loadGame, SAVE_KEY } from "./storage";
 import { Battlefield } from "./ui/Battlefield";
 import {EncounterMoment} from './ui/EncounterMoment';
+import {PlayerHud} from './ui/PlayerHud';
 import { Inspector, Roster } from "./ui/Roster";
 import { ShopWindow } from "./ui/ShopWindow";
 import {PlaySettings} from "./ui/PlaySettings";
@@ -81,6 +82,7 @@ function GameApp({initialGame,saveEnabled=true}:{initialGame:Game;saveEnabled?:b
   <div className="match-layout">
    <div className="stage" ref={mapRef}><div className="stage-caption"><span><i className="live-dot"/> 칼바람 나락</span><span>전장 시뮬레이션 · {game.encounter?"교전 중":game.phase==="decision"?"판단의 순간":"관전 모드"}</span></div>
     <Battlefield game={game} selected={selected} onSelect={setSelected} onUsePortal={()=>open(popupValid('respawn',game)?'respawn':'base')} onShop={openShop}/>
+    <PlayerHud game={game} onSettings={openSettings} onShop={openShop} onFocus={()=>setSelected(game.playerId)}/>
     <EncounterMoment game={game}/>
     <WorldStatus game={game}/>
    </div>
