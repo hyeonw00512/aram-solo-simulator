@@ -10,6 +10,7 @@ import { loadGame, SAVE_KEY } from "./storage";
 import { Battlefield } from "./ui/Battlefield";
 import {EncounterMoment} from './ui/EncounterMoment';
 import {PlayerHud} from './ui/PlayerHud';
+import {EncounterRecaps} from './ui/TeamMemory';
 import { Inspector, Roster } from "./ui/Roster";
 import { ShopWindow } from "./ui/ShopWindow";
 import {PlaySettings} from "./ui/PlaySettings";
@@ -110,7 +111,7 @@ function GameApp({initialGame,saveEnabled=true}:{initialGame:Game;saveEnabled?:b
   <BaseWindow game={game} open={active==='base'} update={op=>{update(op);close()}} onShop={openShop} onMinimize={minimize}/>
   <ResultWindow game={game} open={active==='result'} onMinimize={minimize} onRestart={reset}/>
   <RestartWindow open={active==='restart'} onCancel={close} onConfirm={confirmReset}/>
-  <div className="bottom-grid"><section className="journal panel"><div className="section-label"><h2>경기 타임라인</h2><label><input type="checkbox" checked={allLogs} onChange={e=>setAllLogs(e.target.checked)}/> 상세 로그</label></div><div className="log">{visibleLogs.map((line,i)=><p key={i} className={line.tone??""}><time>{clock(line.time)}</time><span>{line.text}</span></p>)}</div></section><section className="recaps panel"><h2>교전 복기</h2><p className="muted">선택 → 팀원의 판단 → 실제 결과 → 다음 교전의 신뢰</p>{!game.encounterHistory.length&&<p>첫 교전이 끝나면 팀원별 판단 근거가 기록됩니다.</p>}{[...game.encounterHistory].reverse().map(result=><details key={result.id}><summary>{result.text}</summary>{result.rounds.map(round=><div key={round.time}><h3>{clock(round.time)} · 판단 근거</h3>{round.plans.map(plan=><p key={plan.unitId}><b>{[...game.blue,...game.red].find(u=>u.id===plan.unitId)?.champion.name} · {definitions.actions[plan.action]}</b><br/>{plan.reason}{plan.misunderstood?" [진입 신호로 오해]":""}</p>)}</div>)}</details>)}</section></div>
+  <div className="bottom-grid"><section className="journal panel"><div className="section-label"><h2>경기 타임라인</h2><label><input type="checkbox" checked={allLogs} onChange={e=>setAllLogs(e.target.checked)}/> 상세 로그</label></div><div className="log">{visibleLogs.map((line,i)=><p key={i} className={line.tone??""}><time>{clock(line.time)}</time><span>{line.text}</span></p>)}</div></section><EncounterRecaps game={game}/></div>
   <footer>팬 제작 로컬 시뮬레이션 · Riot Games 비공식 · 데이터 16.21.1 · 스킬·아이템·증강은 독립 시뮬레이션 규칙입니다. <details><summary>구현 범위와 저장 안내</summary><p>챔피언 기본·성장 능력치와 아이템 능력치/가격/조합은 원본 데이터 기반입니다. {playableChampions.length}명 챔피언의 개별 스킬, {augments.length}종 선택 증강, 지원 아이템 효과와 넥서스 파괴를 적용합니다. 수치·사거리·자동 발동은 원작과 다르며, 이블린 위장은 감지 거리와 표적 제한으로 구현했으며, 자유 조작·완전한 시야와 일부 아이템은 아직 미지원입니다. v3는 새 경기로 시작하며 이전 v1/v2 저장 키는 삭제하지 않습니다.</p></details></footer>
  </main>;
 }

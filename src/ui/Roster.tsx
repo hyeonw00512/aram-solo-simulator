@@ -1,4 +1,5 @@
 import {skillRank} from '../engine/skill-training';
+import {MemoryHistory} from './TeamMemory';
 import {ExperienceBar,ProgressionPanel} from './ProgressionPanel';
 import {ResourceBar} from './ResourceBar';
 import {BuildDetails} from './BuildDetails';
@@ -18,4 +19,4 @@ export function Roster({game,team,selected,onSelect}:{game:Game;team:'blue'|'red
  </button>})}</section>
 }
 export function Inspector({game,unit}:{game:Game;unit:Unit}) {const s=statsFor(unit);return <section className="inspector"><div className="inspector-heading"><img className="portrait" src={portrait(unit)} alt=""/><div><h2>{unit.champion.name} <small>Lv.{unit.level}</small></h2><p>{unit.traits.join(' · ')}</p></div></div><ResourceBar unit={unit}/><div className="stat-grid">{[['공격력',s.ad],['주문력',s.ap],['방어력',s.armor],['마법 저항',s.mr],['공격 속도',Number(s.attackSpeed.toFixed(2))],['이동 속도',s.moveSpeed]].map(([name,value])=><div key={name}><span>{name}</span><strong>{typeof value==='number'?Math.round(value*100)/100:value}</strong></div>)}</div><div className="inspector-meta">보유 골드 {unit.gold}G · 누적 피해 {Math.round(unit.damage)} · 증강 {unit.augments.length}개</div>
- <ProgressionPanel game={game} unit={unit}/><BuildDetails game={game} unit={unit}/><AugmentDetails unit={unit}/><details><summary>이 플레이어가 팀원을 보는 시선</summary>{game[unit.team].filter(u=>u.id!==unit.id).map(u=>{const m=unit.relationships[u.id];return <p key={u.id}><b>{u.champion.name} · 신뢰 {m?.trust??0}</b><br/>{m?.reason??'아직 함께한 교전이 없습니다.'}{m&&<small> · {m.experiences}회 경험 / 무리한 진입 {m.reckless}회</small>}</p>})}</details></section>}
+ <ProgressionPanel game={game} unit={unit}/><BuildDetails game={game} unit={unit}/><AugmentDetails unit={unit}/><details><summary>이 플레이어가 팀원을 보는 시선</summary>{game[unit.team].filter(u=>u.id!==unit.id).map(u=>{const m=unit.relationships[u.id];return <p key={u.id}><b>{u.champion.name} · 신뢰 {m?.trust??0}</b><br/>{m?.lastChange?.reason??m?.reason??'아직 함께한 교전이 없습니다.'}{m&&<small> · {m.experiences}회 경험 / 무리한 진입 {m.reckless}회</small>}</p>})}</details><MemoryHistory game={game} unit={unit}/></section>}

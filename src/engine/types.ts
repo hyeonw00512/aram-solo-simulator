@@ -6,7 +6,10 @@ export type Trait = "공격적입니다" | "사립니다" | "딜러만 노립니
 export interface BaseStats { hp: number; hpperlevel: number; armor: number; armorperlevel: number; spellblock: number; spellblockperlevel: number; attackdamage: number; attackdamageperlevel: number; attackspeed: number; attackspeedperlevel: number; movespeed: number; attackrange: number; mp: number; mpperlevel: number; hpregen: number; hpregenperlevel: number; }
 export interface Champion { id: string; name: string; title: string; roles: Role[]; attack: number; magic: number; durability: number; mobility: number; skills: string[]; playable: boolean; stats: BaseStats; }
 export interface Augment { id: string; name: string; tier: Tier; effect: string; power: number; tags: string[]; }
-export interface Relationship { trust: number; reckless: number; experiences: number; reason: string; updatedAt: number; }
+export interface Relationship { trust: number; reckless: number; experiences: number; reason: string; updatedAt: number; lastChange?:{time:number;reason:string;encounterId:number}; }
+export type MemoryFactor = 'caution' | 'trust' | 'angle' | 'necessity';
+export interface DecisionMemory { leaderId:string; trust:number; experiences:number; reckless:number; reason:string; rememberedAt:number; factors:MemoryFactor[]; }
+export interface TrustChange { observerId:string; leaderId:string; time:number; before:number; after:number; reckless:number; reason:string; }
 export type SkillSlot = "Q" | "W" | "E" | "R";
 export type BuildPath = "tank" | "ap" | "ad" | "support";
 export interface StatusEffect {kind: "silence" | "charm" | "magic-shred" | "stun" | "root" | "slow" | "shield" | "burn" | "armor-shred" | "weaken" | "stasis" | "heal-cut" | "empower" | "speed"; value: number; until: number; source?: string; key?: string;}
@@ -17,7 +20,7 @@ export type Intent = "engage" | "retreat" | "trade" | "wait" | "peel" | "hold" |
 export type Reaction = "engage" | "join" | "retreat" | "cover" | "poke" | "hesitate" | "chase" | "clear" | "push";
 export type Situation = "ally-picked" | "enemy-overextended" | "low-health" | "standoff" | "ally-danger" | "tower-defense" | "siege" | "no-wave" | "ultimate-wait";
 export interface Decision { title: string; description: string; situation?: Situation; choices: { id: string; label: string; bonus: number; hint?: string; }[]; }
-export interface ResponsePlan { unitId: string; action: Reaction; reason: string; misunderstood: boolean; weights: Record<Reaction, number>; }
+export interface ResponsePlan { unitId: string; action: Reaction; reason: string; misunderstood: boolean; weights: Record<Reaction, number>; memory?:DecisionMemory; }
 export interface Encounter {
   id: number; situation: Situation; intent: Intent; wave: number; nextWaveAt: number;
   startDeaths: [number, number]; startHealth: [number, number];
@@ -26,7 +29,7 @@ export interface Encounter {
   protections: { protector: string; protected: string }[];
   rounds: { time: number; plans: ResponsePlan[]; movements?: {unitId:string;from:number;to:number;visible:boolean}[] }[];
 }
-export interface EncounterResult { id: number; intent: Intent; situation: Situation; text: string; allyLosses: number; enemyLosses: number; playerEscaped: boolean; rounds: Encounter["rounds"]; }
+export interface EncounterResult { id: number; intent: Intent; situation: Situation; text: string; allyLosses: number; enemyLosses: number; playerEscaped: boolean; rounds: Encounter["rounds"]; memoryChanges?:TrustChange[]; }
 export interface VisualEvent { at: number; from?: string; to: string; type: "physical" | "magic" | "true" | "miss" | "heal"; amount: number; }
 export interface Building {id:string;team:"blue"|"red";kind:"outer"|"inner"|"inhibitor"|"nexus-tower"|"nexus";name:string;position:number;laneOffset:number;health:number;maxHealth:number;alive:boolean;respawnAt?:number;targetId?:string;aggroUntil?:number;nextAttack:number;}
 export interface Minion {experienceGranted?:boolean;id:string;team:"blue"|"red";kind:"melee"|"caster"|"cannon"|"super";position:number;health:number;maxHealth:number;damage:number;range:number;nextAttack:number;}

@@ -1,4 +1,4 @@
-import type { Game, Unit } from "./types";
+import type { Game, Unit, TrustChange } from "./types";
 import config from "../../data/simulation.json";
 import { statsFor } from "./stats";
 import { available } from './runtime';
@@ -13,8 +13,9 @@ export function opportunity(game: Game, team: "blue" | "red") {
   const ours = strength(team === "blue" ? game.blue : game.red), theirs = strength(team === "blue" ? game.red : game.blue);
   return (ours - theirs) / Math.max(1, ours + theirs);
 }
-export function rememberEncounter(game: Game) {
-  const e = game.encounter; if (!e) return;
+export function rememberEncounter(game: Game):TrustChange[] {
+  const changes:TrustChange[]=[];
+  const e = game.encounter; if (!e) return changes;
   for (const team of [game.blue, game.red]) for (const observer of team) {
     const tookPart = e.rounds.some(r => r.plans.some(p => p.unitId === observer.id));
     if (!tookPart) continue;
@@ -36,9 +37,13 @@ export function rememberEncounter(game: Game) {
       else if (enemyLoss > ownLoss && leader.damage > start.damage) { delta = config.memory.goodDecision; reason = "함께한 교전에서 실제 피해를 주며 이득을 만들었습니다"; }
       else if (charged && ownLoss > enemyLoss) { delta = -config.memory.failurePenalty; reason = "진입 결과가 좋지 않았지만 무리한 판단이라고 단정하지는 않습니다"; }
       else if (leader.id === game.playerId && ["wait", "retreat", "hold"].includes(e.intent) && ownLoss === 0 && initialAngle < 0) { delta = 3; reason = "불리한 상황에서 무리하지 않아 추가 손실을 피했습니다"; }
-      observer.relationships[leader.id] = { trust: Math.max(config.memory.minTrust, Math.min(config.memory.maxTrust, prior.trust + delta)), reckless: prior.reckless + Number(reckless), experiences: prior.experiences + 1, reason, updatedAt: game.time };
+      const after=Math.max(config.memory.minTrust, Math.min(config.memory.maxTrust, prior.trust + delta));
+      observer.relationships[leader.id] = { trust: after, reckless: prior.reckless + Number(reckless), experiences: prior.experiences + 1, reason, updatedAt: game.time,
+        lastChange:delta?{time:game.time,reason,encounterId:e.id}:prior.lastChange };
+      changes.push({observerId:observer.id,leaderId:leader.id,time:game.time,before:prior.trust,after,reckless:observer.relationships[leader.id].reckless,reason});
       if(reckless||(charged&&ownLoss>enemyLoss))reactToMisplay(game,observer,leader,reckless,reason);
-      if (leader.id === game.playerId && delta) game.logs.push({ time: game.time, text: `${observer.champion.name}의 내 판단에 대한 신뢰 ${delta > 0 ? "+" : ""}${delta} → ${observer.relationships[leader.id].trust}: ${reason}.`, tone: delta > 0 ? "good" : "bad" });
+      if (leader.id === game.playerId && after!==prior.trust) game.logs.push({ time: game.time, text: `${observer.champion.name}의 내 판단에 대한 신뢰 ${after > prior.trust ? "+" : ""}${after-prior.trust} → ${after}: ${reason}.`, tone: after > prior.trust ? "good" : "bad" });
     }
   }
+  return changes;
 }

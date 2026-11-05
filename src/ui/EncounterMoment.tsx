@@ -2,6 +2,7 @@ import type {Game} from '../engine/types';
 import definitions from '../../data/encounters.json';
 import {mapPoint,mapPolygon,laneUnitPoint} from './mapGeometry';
 import {encounterPresentation,tacticalSnapshot,observable,onBattlefield} from './encounter-view';
+import {MemoryReaction,TrustChanges} from './TeamMemory';
 
 export function TacticalLayer({game}:{game:Game}){
  const snapshot=game.phase==='decision'?tacticalSnapshot(game):undefined;
@@ -19,7 +20,7 @@ export function TacticalLayer({game}:{game:Game}){
   })}
   {!snapshot&&view?.rows.filter(r=>r.unit.team==='blue'&&onBattlefield(r.unit)).map(({unit,plan,late})=>{
    const p=laneUnitPoint(unit),color=plan.misunderstood?'#ffc18b':plan.action==='retreat'?'#bac5ee':'#9ce4db';
-   const label=plan.misunderstood?'오해 · 진입':late?'뒤늦은 합류':plan.action==='hesitate'?'각을 보는 중':definitions.actions[plan.action];
+   const label=plan.misunderstood?'오해 · 진입':late?'뒤늦은 합류':plan.memory?.factors.includes('caution')?'기억 · 주저':plan.memory&&plan.memory.trust<0&&plan.memory.factors.includes('angle')?'각 보고 호응':plan.action==='hesitate'?'각을 보는 중':definitions.actions[plan.action];
    return <g key={`reaction-${unit.id}`} transform={`translate(${p.x} ${p.y-44})`}><rect x="-40" y="-11" width="80" height="21" rx="5" fill="#0b1b28ed" stroke={color}/><text textAnchor="middle" y="3" fill={color} fontSize="11">{label}</text></g>;
   })}
  </g>;
@@ -49,9 +50,9 @@ export function EncounterMoment({game}:{game:Game}){
   <div className="moment-heading"><div><span className="eyebrow">{result?'교전 종료':'선택 이후'}</span><h2>{intent}</h2></div><span>{result?'결과 확인':`${encounter.rounds.length} / 4차 판단`}{round&&` · ${Math.floor(round.time/60)}:${String(round.time%60).padStart(2,'0')}`}</span></div>
   <ol className="moment-steps" aria-label="교전 읽기 순서">{['내 행동','팀원 반응','상대 대응','교전 결과'].map((text,i)=><li key={text} className={stage===i?'current':stage>i?'done':''} aria-current={stage===i?'step':undefined}><b>{i+1}</b>{text}</li>)}</ol>
   <p className="moment-player">{player?<><b>나 · {definitions.actions[player.plan.action]}</b><span>{player.plan.reason}</span></>:'선택을 전달했습니다. 다음 판단에서 각자의 반응이 드러납니다.'}</p>
-  {!!allies.length&&<div className="moment-allies" key={`${encounter.id}-${round?.time}`}>{allies.map(({unit,plan,late})=><article key={unit.id} className={plan.misunderstood?'misread':''}><div><img src={`/assets/champions/${unit.champion.id}.png`} alt=""/><span><strong>{unit.champion.name}</strong><b>{definitions.actions[plan.action]}{late?' · 뒤늦은 합류':''}</b></span></div>{plan.misunderstood&&<em>교환을 진입 신호로 오해</em>}<p>{plan.reason}</p></article>)}</div>}
+  {!!allies.length&&<div className="moment-allies" key={`${encounter.id}-${round?.time}`}>{allies.map(({unit,plan,late})=><article key={unit.id} className={plan.misunderstood?'misread':''}><div><img src={`/assets/champions/${unit.champion.id}.png`} alt=""/><span><strong>{unit.champion.name}</strong><b>{definitions.actions[plan.action]}{late?' · 뒤늦은 합류':''}</b></span></div>{plan.misunderstood&&<em>교환을 진입 신호로 오해</em>}<p>{plan.reason}</p><MemoryReaction game={game} plan={plan}/></article>)}</div>}
   {!!enemies.length&&<details className="moment-enemies"><summary>상대 대응{enemies.map(({unit,plan})=><span key={unit.id}>{unit.champion.name} · {definitions.actions[plan.action]}</span>)}</summary>{enemies.map(({unit,plan})=><p key={unit.id}><b>{unit.champion.name}</b> {plan.reason}</p>)}</details>}
-  {result&&<p className="moment-result" role="status">{result.text}</p>}
+  {result&&<><p className="moment-result" role="status">{result.text}</p><TrustChanges game={game} result={result}/></>}
   <small className="moment-note">{round?'마지막 판단 시점의 기록 · 점선은 해당 판단에서의 실제 이동 · 전투는 양 팀 동시 판단으로 진행됩니다.':'팀원들은 이전 경험, 현재 체력과 각을 보고 독립적으로 판단합니다.'}</small>
  </section>;
 }

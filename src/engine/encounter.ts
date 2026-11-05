@@ -12,7 +12,7 @@ import { opportunity, rememberEncounter, trustOf } from "./memory";
 import simulation from "../../data/simulation.json";
 import {nearPortal} from './portal';
 import { Rng } from "./rng";
-import type { Game, Intent, Reaction, ResponsePlan, Situation, Unit } from "./types";
+import type { Game, Intent, Reaction, ResponsePlan, Situation, Unit, MemoryFactor } from "./types";
 
 import {orderResponse} from './team-chat';
 
@@ -67,8 +67,8 @@ export function startEncounter(game: Game, id: string) {
 export function planResponse(game: Game, unit: Unit, rng: Rng): ResponsePlan {
   const encounter = game.encounter!;
   const weights = Object.fromEntries(actions.map(a => [a, balance.weights.baseline])) as Record<Reaction, number>;
-  const reasons: Record<Reaction, { value: number; text: string }[]> = { engage: [], join: [], retreat: [], cover: [], poke: [], hesitate: [], chase: [], clear: [], push: [] };
-  const add = (action: Reaction, value: number, text: string) => { weights[action] += value; if (value > 0) reasons[action].push({ value, text }); };
+  const reasons: Record<Reaction, { value: number; text: string; memory?:MemoryFactor }[]> = { engage: [], join: [], retreat: [], cover: [], poke: [], hesitate: [], chase: [], clear: [], push: [] };
+  const add = (action: Reaction, value: number, text: string, memory?:MemoryFactor) => { weights[action] += value; if (value > 0) reasons[action].push({ value, text, memory }); };
   if (unit.id === game.playerId) {
     const waitForOpening = encounter.wave > 0 && opportunity(game, unit.team) > .15 && healthRatio(unit) > .45 && unit.cooldownUntil <= game.time;
     const action: Reaction = encounter.intent === "push" ? "push" : encounter.intent === "clear" ? "clear" : encounter.intent === "regroup" ? "cover" : encounter.intent === "engage" ? "engage" : ["retreat", "healthpack"].includes(encounter.intent) ? "retreat" : encounter.intent === "wait" ? waitForOpening ? "poke" : "hesitate" : ["peel", "hold"].includes(encounter.intent) ? "cover" : encounter.wave > 0 ? "retreat" : "poke";
@@ -114,11 +114,11 @@ export function planResponse(game: Game, unit: Unit, rng: Rng): ResponsePlan {
   const frontLeader = friends.filter(f => f.id !== unit.id && encounter.rounds.at(-1)?.plans.some(p => p.unitId === f.id && ["engage", "join", "chase"].includes(p.action))).sort((a,b) => direction(unit) * (b.position - a.position))[0];
   const leader = unit.team === "blue" && encounter.intent === "engage" && game.blue[0].alive ? game.blue[0] : frontLeader;
   const trust = leader ? trustOf(unit, leader) : 0;
-  if (leader && trust < 0) add("hesitate", -trust / 20 * simulation.memory.reluctance, `${leader.champion.name}의 이전 무리한 플레이를 기억해 신중해집니다 (신뢰 ${trust})`);
-  if (leader && trust > 0) add("join", trust / 20, `${leader.champion.name}과(와) 쌓은 신뢰로 호응합니다 (신뢰 +${trust})`);
-  add("join", Math.max(0, angle) * simulation.memory.goodAngle * 5, trust < 0 ? "신뢰는 낮지만 지금은 체력·인원·스킬 준비가 유리해 직접 각을 보고 호응합니다" : "현재 체력·인원·스킬 준비가 유리해 호응합니다");
+  if (leader && trust < 0) add("hesitate", -trust / 20 * simulation.memory.reluctance, `${leader.champion.name}과(와)의 이전 교전 경험 때문에 신중해집니다 (신뢰 ${trust})`, 'caution');
+  if (leader && trust > 0) add("join", trust / 20, `${leader.champion.name}과(와) 쌓은 신뢰로 호응합니다 (신뢰 +${trust})`, 'trust');
+  add("join", Math.max(0, angle) * simulation.memory.goodAngle * 5, trust < 0 ? "신뢰는 낮지만 지금은 체력·인원·스킬 준비가 유리해 직접 각을 보고 호응합니다" : "현재 체력·인원·스킬 준비가 유리해 호응합니다", 'angle');
   const cornered = nearest < 16 && (unit.team === "blue" ? unit.position < context.own.position+2 : unit.position > context.own.position-2);
-  add("cover", cornered ? simulation.memory.necessity * 2 : 0, "포탑 앞까지 밀려 더 물러나기 어려워 함께 받아쳐야 합니다");
+  add("cover", cornered ? simulation.memory.necessity * 2 : 0, "포탑 앞까지 밀려 더 물러나기 어려워 함께 받아쳐야 합니다", 'necessity');
   if (unit.team === "blue") {
     const previous = encounter.rounds.at(-1);
     const chargingAlly = previous?.plans.find(plan => plan.unitId !== unit.id && plan.unitId !== game.playerId && ["engage", "join"].includes(plan.action) && friends.some(friend => friend.id === plan.unitId));
@@ -155,9 +155,12 @@ export function planResponse(game: Game, unit: Unit, rng: Rng): ResponsePlan {
   let action = actions[actions.length - 1];
   for (const a of actions) { roll -= weights[a]; if (roll < 0) { action = a; break; } }
   const misunderstood = action === "engage" && misunderstandingWeight > 0 && rng.chance(misunderstandingWeight / weights.engage);
-  const factors = reasons[action].filter(r => misunderstood || !r.text.includes("진입 신호")).sort((a, b) => b.value - a.value).slice(0, 2).map(r => r.text);
+  const selectedFactors = reasons[action].filter(r => misunderstood || !r.text.includes("진입 신호")).sort((a, b) => b.value - a.value).slice(0, 2);
+  const factors = selectedFactors.map(r => r.text);
   if (misunderstood && !factors.some(f => f.includes("신호"))) factors.unshift("짧은 교환을 전면 진입 신호로 받아들였습니다");
-  return { unitId: unit.id, action, misunderstood, weights, reason: factors.join(" · ") || "순간적인 판단으로 행동합니다" };
+  const prior=leader?unit.relationships[leader.id]:undefined;
+  const memory=leader&&prior?.experiences?{leaderId:leader.id,trust,experiences:prior.experiences,reckless:prior.reckless,reason:prior.lastChange?.reason??prior.reason,rememberedAt:prior.lastChange?.time??prior.updatedAt,factors:selectedFactors.flatMap(f=>f.memory?[f.memory]:[])}:undefined;
+  return { unitId: unit.id, action, misunderstood, weights, reason: factors.join(" · ") || "순간적인 판단으로 행동합니다", ...(memory?{memory}:{}) };
 }
 
 function targetFor(unit: Unit, enemies: Unit[], rng: Rng) {
@@ -255,6 +258,6 @@ export function advanceEncounter(game: Game) {
   log(game, text, "major");
   game.encounterHistory.push({ id: encounter.id, intent: encounter.intent, situation: encounter.situation, text, allyLosses, enemyLosses, playerEscaped, rounds: encounter.rounds });
   game.encounterHistory = game.encounterHistory.slice(-6);
-  rememberEncounter(game);
+  game.encounterHistory[game.encounterHistory.length-1].memoryChanges=rememberEncounter(game);
   game.encounter = undefined; game.nextDecision = game.time + balance.decisionInterval;
 }
