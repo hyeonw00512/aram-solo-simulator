@@ -14,7 +14,7 @@ import {nearPortal} from './portal';
 import { Rng } from "./rng";
 import type { Game, Intent, Reaction, ResponsePlan, Situation, Unit, MemoryFactor } from "./types";
 
-import {orderResponse} from './team-chat';
+import {orderResponse,focusTarget,expireFocusOrders} from './team-chat';
 
 const actions = Object.keys(definitions.actions) as Reaction[];
 const clamp = (n: number) => Math.min(100, Math.max(0, n));
@@ -163,7 +163,8 @@ export function planResponse(game: Game, unit: Unit, rng: Rng): ResponsePlan {
   return { unitId: unit.id, action, misunderstood, weights, reason: factors.join(" · ") || "순간적인 판단으로 행동합니다", ...(memory?{memory}:{}) };
 }
 
-function targetFor(unit: Unit, enemies: Unit[], rng: Rng) {
+function targetFor(unit: Unit, enemies: Unit[], rng: Rng,game:Game) {
+  const focus=focusTarget(game,unit);if(focus&&enemies.some(u=>u.id===focus.id))return focus;
   const p = personality(unit);
   const carries = enemies.filter(e => ["mage","marksman"].includes(buildIdentity(e).role));
   const pool = carries.length && rng.chance(p.focusCarry) ? carries : enemies;
@@ -173,6 +174,7 @@ function targetFor(unit: Unit, enemies: Unit[], rng: Rng) {
 export function advanceEncounter(game: Game) {
   const encounter = game.encounter;
   if (!encounter || game.time < encounter.nextWaveAt) return;
+  expireFocusOrders(game);
   const rng = new Rng(game.seed + encounter.id * 104729 + encounter.wave * 7919);
   const participants = units(game).filter(u => u.alive && !u.returningToBase && !u.portal && !(u.atFountain&&nearPortal(u)));
   const plans = participants.map(u => planResponse(game, u, rng));
@@ -209,11 +211,11 @@ export function advanceEncounter(game: Game) {
     else if (plan.action === "retreat") destinations.set(unit.id, clamp(unit.position - direction(unit) * balance.retreatStep * movement));
     else if (["engage", "join", "chase"].includes(plan.action)) {
       const enemies = participants.filter(u => u.team !== unit.team&&visibleTarget(game,u));
-      const target = targetFor(unit, enemies, rng);
+      const target = targetFor(unit, enemies, rng,game);
       if (target) destinations.set(unit.id, clamp(unit.position + Math.sign(target.position - unit.position) * Math.min(balance.step * movement, Math.abs(target.position - unit.position))));
     } else if (plan.action === "hesitate") {
       // A late arrival actually closes distance; it can act next wave.
-      const target = targetFor(unit, participants.filter(u => u.team !== unit.team&&visibleTarget(game,u)), rng);
+      const target = targetFor(unit, participants.filter(u => u.team !== unit.team&&visibleTarget(game,u)), rng,game);
       if (target) destinations.set(unit.id, clamp(unit.position + Math.sign(target.position - unit.position) * Math.min(balance.step / 2, Math.abs(target.position - unit.position))));
     }
   }
@@ -237,7 +239,7 @@ export function advanceEncounter(game: Game) {
     if (!attacker.alive || ["retreat","hesitate","clear","push"].includes(plan.action) || blocked(attacker)) continue;
     const range = attackReach(attacker, game.time);
     const candidates = participants.filter(u => u.alive && visibleTarget(game,u) && u.team !== attacker.team && Math.abs(u.position - attacker.position) <= range);
-    const victim = targetFor(attacker, candidates, rng);
+    const victim = targetFor(attacker, candidates, rng,game);
     if (!victim) { log(game, `${attacker.champion.name}: 거리가 벌어져 공격하지 못했습니다.`); continue; }
     const multiplier = plan.action === "poke" ? balance.pokeMultiplier : plan.action === "cover" ? balance.coverMultiplier : 1;
     const victimPlan = plans.find(p => p.unitId === victim.id);

@@ -8,7 +8,7 @@ import {statsFor,buildIdentity} from './stats';
 import {state,available,allUnits,blocked,effect} from './runtime';
 import {applyDamage,resolveAttack,log, supportTurn} from './combat-v4';
 import {kitFor,abilityName,ultimateReady} from './kits';
-import {activeOrder} from './team-chat';
+import {activeOrder,focusTarget,expireFocusOrders} from './team-chat';
 import {Rng} from './rng';
 import {landmark,MAP_LAYOUT_VERSION,portalPoint} from './map-layout';
 import {awardMinionExperience} from './progression';
@@ -69,6 +69,7 @@ export function strategicContext(g:Game,u:Unit){
 }
 export function advanceWorld(g:Game,combat=true){
  const w=ensureWorld(g);if(g.phase!=='playing')return;
+ expireFocusOrders(g);
  for(const b of w.buildings)if(!b.alive&&b.kind==='inhibitor'&&(b.respawnAt??Infinity)<=g.time){b.alive=true;b.health=b.maxHealth;log(g,(b.team==='blue'?'아군':'적')+' 억제기 재생','major');}
  if(g.time>=w.nextWave)spawnWave(g);
  const rng=new Rng(g.seed+g.time*1949),fighters=allUnits(g).filter(available),minionDamage=new Map<string,number>();
@@ -94,6 +95,7 @@ export function advanceWorld(g:Game,combat=true){
   const minion=opposing[0],building=w.buildings.find(b=>b.team!==u.team&&b.alive&&structureUnlocked(g,b));
   const role=buildIdentity(u),intent=g.encounter&&u.id===g.playerId?g.encounter.intent:undefined;
   const order=activeOrder(g,u);
+  enemy=focusTarget(g,u)??enemy;
   const tactic=u.id===g.playerId&&!g.encounter?tacticalPlan(g,u,enemy,context,minion?.position):undefined;
   if(tactic){enemy=tactic.target!;u.tacticalReason=tactic.reason;}
   else if(u.id===g.playerId&&g.encounter)u.tacticalReason='분기점에서 직접 선택한 행동 진행 중';
@@ -105,7 +107,7 @@ export function advanceWorld(g:Game,combat=true){
    if(tactic?.goal!==undefined)goal=tactic.goal;
    if(order?.kind==='retreat'||order?.kind==='defend')goal=context.own.position+(u.team==='blue'?-4:4);
    if(order?.kind==='group')goal=g[u.team][0].alive?g[u.team][0].position:context.own.position;
-   if(order?.kind==='engage'&&enemy&&healthRatioLocal(u)>.35)goal=enemy.position+(u.team==='blue'?-6:6);
+   if((order?.kind==='engage'||order?.kind==='focus')&&enemy&&healthRatioLocal(u)>.35)goal=enemy.position+(u.team==='blue'?-1:1)*(order.kind==='focus'?Math.max(6,Math.min(22,s.attackRange)):6);
    if(order?.kind==='clear')goal=minion?.position??context.own.position;
    u.position=moveToward(u.position,goal,s.moveSpeed/325*1.2);
   }

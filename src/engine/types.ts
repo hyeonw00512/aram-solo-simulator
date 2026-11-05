@@ -36,12 +36,13 @@ export interface Minion {experienceGranted?:boolean;id:string;team:"blue"|"red";
 export interface World {layoutVersion?:number;buildings:Building[];minions:Minion[];wave:number;nextWave:number;serial:number;}
 export interface Game { augmentTiers?:Tier[]; seenAugments?:string[]; preparationRules?:1; respawnPrompt?:boolean; shopReturn?:"portal"|"walk"; augmentRerolls?:boolean[]; augmentSerial?:number; matchupRemaining?:number; lobby?:PickLobby; chat?:TeamChat; world?:World; schemaVersion: 3; seed: number; phase: Phase; time: number; blue: Unit[]; red: Unit[]; playerId: string; logs: LogLine[]; pending?: Decision; nextDecision: number; nextAugmentLevel: number; winner?: "blue" | "red"; encounter?: Encounter; encounterSerial: number; encounterHistory: EncounterResult[]; visualEvents: VisualEvent[]; packs: { blue: number; red: number }; }
 
-export type OrderKind='antiheal'|'engage'|'retreat'|'group'|'clear'|'defend';
-export interface TeamOrder {id:number;kind:OrderKind;until:number;reason:string;}
+export type OrderKind='antiheal'|'engage'|'retreat'|'group'|'clear'|'defend'|'focus';
+export interface TeamOrder {id:number;kind:OrderKind;until:number;reason:string;focusId?:string;}
+export interface QuickOrder {id:number;kind:Exclude<OrderKind,'antiheal'>;at:number;focusId?:string;responses:{unitId:string;status:'accepted'|'ignored'|'unavailable';reason:string}[];}
 export interface ShopRequest {orderId:number;itemId:string;status:'pending'|'fulfilled';reason:string;}
 export interface ChatMessage {id:number;at:number;sender:string;text:string;tone:'player'|'accept'|'defer'|'ignore'|'system'|'ping';reason?:string;}
 export interface TeamPing {id:number;at:number;sender:string;targetId:string;position:number;count:number;reason:string;}
-export interface TeamChat {serial:number;orderSerial:number;lastSentAt?:number;messages:ChatMessage[];pings?:TeamPing[];lastPingAt?:Record<string,number>;}
+export interface TeamChat {serial:number;orderSerial:number;lastSentAt?:number;messages:ChatMessage[];pings?:TeamPing[];lastPingAt?:Record<string,number>;quickOrder?:QuickOrder;}
 
 export interface PickTrade {partnerId:string;direction:"incoming"|"outgoing";playerChampion:string;partnerChampion:string;resolveAt:number;}
 export interface PickLobby {elapsed:number;bench:string[];serial:number;events:string[];trade?:PickTrade;cooldowns:Record<string,number>;aiChanges:Record<string,number>;locked:boolean;}

@@ -11,6 +11,7 @@ import { Battlefield } from "./ui/Battlefield";
 import {EncounterMoment} from './ui/EncounterMoment';
 import {PlayerHud} from './ui/PlayerHud';
 import {EncounterRecaps} from './ui/TeamMemory';
+import {QuickOrders} from './ui/QuickOrders';
 import { Inspector, Roster } from "./ui/Roster";
 import { ShopWindow } from "./ui/ShopWindow";
 import {PlaySettings} from "./ui/PlaySettings";
@@ -82,6 +83,7 @@ function GameApp({initialGame,saveEnabled=true}:{initialGame:Game;saveEnabled?:b
   {saveError&&<p role="status" className="warning">브라우저 저장 공간이 부족해 진행을 저장하지 못했습니다.</p>}
   <div className="match-layout">
    <div className="stage" ref={mapRef}><div className="stage-caption"><span><i className="live-dot"/> 칼바람 나락</span><span>전장 시뮬레이션 · {game.encounter?"교전 중":game.phase==="decision"?"판단의 순간":"관전 모드"}</span></div>
+    <QuickOrders game={game} selected={selected} update={update}/>
     <Battlefield game={game} selected={selected} onSelect={setSelected} onUsePortal={()=>open(popupValid('respawn',game)?'respawn':'base')} onShop={openShop}/>
     <PlayerHud game={game} onSettings={openSettings} onShop={openShop} onFocus={()=>setSelected(game.playerId)}/>
     <EncounterMoment game={game}/>
